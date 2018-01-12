@@ -27,26 +27,36 @@
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="index.html">Cramming Clique or Cliq and Cram</a>
             <form class="form-inline">
-                <!-- button that goes to signup form -->
-                <button class="btn btn-outline-success" type="button"><a href="register.html">Sign up</a></button>
-                <!-- button that goes to login form -->
-                <button class="btn btn-outline-success" type="button"><a href="login.html">Login</a></button>
+                <button class="btn btn-outline-success" type="button"><a href="feed.html">Explore</a></button>
+                <!-- link to create an event -->
+                <button class="btn btn-outline-success" type="button"><a href="#">Create</a></button>
+                <!-- link to events near -->
+                <button class="btn btn-outline-success" type="button"><a href="#">Near me</a></button>
+                <!-- user dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="#">Profile</a>
+                    </div>
+                </div>
             </form>
         </nav>
     </div>
 
     <!-- main container -->
-    <div id="landingContainer">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5 class="card-title">Title if we want</h5>
-                <p class="card-text">Description of app.<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet ultrices mi, ac lacinia quam. In sem odio, sagittis dignissim porta sit amet, egestas nec dolor. Vestibulum aliquet vulputate augue, in hendrerit nibh pellentesque sed. Integer pretium tortor id condimentum condimentum. Vivamus eget lorem lacus. Sed mauris diam, finibus ut lorem at, varius dignissim ipsum. Integer in dictum elit.</p>
-                <!-- button that goes to signup form -->
-                <a href="register.html" class="btn btn-primary">Sign up</a>
-            </div>
-        </div>
-                            <button class="btn btn-outline-success" type="button"><a href="feed.html">Explore</a></button> this button won't be here
+    <div id="feedContainer">
+filter, expandable and collapsable cards
     </div>
+
+
+
+
+
+
+
 
     <!-- bottom navigation -->
     <div id="bottomNav">
