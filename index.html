@@ -18,6 +18,9 @@
     <!-- link to jQuery JS -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
+    <!-- link to load google API for signin -->
+    <script src="https://apis.google.com/js/api:client.js"></script>
+
     <title>Cramming Clique</title>
 </head>
 
@@ -26,12 +29,10 @@
     <div id="topNav">
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="index.html">Cramming Clique or Cliq and Cram</a>
-            <form class="form-inline">
                 <!-- button that goes to signup form -->
-                <button class="btn btn-outline-success" type="button"><a href="register.html">Sign up</a></button>
+                <button class="btn btn-outline-success" type="button" id="btn-signUp">Sign Up</button>
                 <!-- button that goes to login form -->
-                <button class="btn btn-outline-success" type="button"><a href="login.html">Login</a></button>
-            </form>
+                <button class="btn btn-outline-success" type="button" id="btn-login">Login</button>
         </nav>
     </div>
 
@@ -76,9 +77,9 @@
 <!-- link to Bootstrap JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
-<!-- link to .js in javascript folder
-<script type="text/javascript" src="assets/javascript/.js"></script>
--->
+<!-- link to .js in javascript folder -->
+<script type="text/javascript" src="assets/javascript/login.js"></script>
+
 
 </body>
 </html>
