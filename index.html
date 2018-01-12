@@ -18,6 +18,9 @@
     <!-- link to jQuery JS -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
+    <!-- link to load google API for signin -->
+    <script src="https://apis.google.com/js/api:client.js"></script>
+
     <title>Cramming Clique</title>
 </head>
 
@@ -28,9 +31,9 @@
             <a class="navbar-brand" href="index.html">Cramming Clique or Cliq and Cram</a>
             <form class="form-inline">
                 <!-- button that goes to signup form -->
-                <button class="btn btn-outline-success" type="button"><a href="register.html">Sign up</a></button>
+                <button class="btn btn-outline-success" type="button" id="btn-signUp">Sign Up</button>
                 <!-- button that goes to login form -->
-                <button class="btn btn-outline-success" type="button"><a href="login.html">Login</a></button>
+                <button class="btn btn-outline-success" type="button" id="btn-login">Login</button>
             </form>
         </nav>
     </div>
