@@ -41,6 +41,12 @@ function attachSignin(element) {
         });
 }
 
+function signOut() {
+    googleAuth.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+
 function checkIfLoggedIn() {
     if (sessionStorage.getItem("userEntity") == null) {
         return false;
