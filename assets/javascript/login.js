@@ -29,7 +29,7 @@ function attachSignin(element) {
             userEntity.idToken = googleUser.getAuthResponse().id_token;
 
             //Store the entity object in sessionStorage where it will be accessible from all pages of the site.
-            sessionStorage.setItem("userEntity", JSON.stringify(myUserEntity));
+            sessionStorage.setItem("userEntity", JSON.stringify(userEntity));
 
 
             window.location.href = "feed.html";
