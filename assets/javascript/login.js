@@ -46,19 +46,20 @@ function attachSignin(element) {
             //Store the entity object in sessionStorage where it will be accessible from all pages of the site.
             sessionStorage.setItem("userEntity", JSON.stringify(userEntity));
 
-            database.ref("/crammingUsers/email").equalTo(googleUser.getBasicProfile().getEmail()).on("value", function(snapshot) {
-                console.log(snapshot);
-            });
+            var user = database.ref("/crammingUsers/email").equalTo(googleUser.getBasicProfile().getEmail());
+            console.log("user in db: " + user);
+            if (user === null) {
+                console.log("user is null");
+                var crammingUser = {
+                    "id": googleUser.getBasicProfile().getId(),
+                    "name": googleUser.getBasicProfile().getName(),
+                    "imageUrl": googleUser.getBasicProfile().getImageUrl(),
+                    "email": googleUser.getBasicProfile().getEmail(),
+                    "phone": ""
+                };
 
-            var crammingUser = {
-                "id": googleUser.getBasicProfile().getId(),
-                "name": googleUser.getBasicProfile().getName(),
-                "imageUrl": googleUser.getBasicProfile().getImageUrl(),
-                "email": googleUser.getBasicProfile().getEmail(),
-                "phone": ""
-            };
-
-            database.ref("/crammingUsers").push(crammingUser);
+                database.ref("/crammingUsers").push(crammingUser);
+            }
 
             window.location.href = "feed.html";
         },
