@@ -16,14 +16,35 @@ function attachSignin(element) {
     console.log(element);
     googleAuth.attachClickHandler(element, {},
         function(googleUser) {
-        	console.log("success signin");
-            $("#btn-login").text("Sign Out");
+            console.log("success signin");
+            //$("#btn-login").text("Sign Out");
             console.log(googleUser.getBasicProfile().getName());
             console.log(googleUser.getBasicProfile().getImageUrl());
+
+            var userEntity = {};
+            userEntity.id = googleUser.getBasicProfile().getId();
+            userEntity.name = googleUser.getBasicProfile().getName();
+            userEntity.imageUrl = googleUser.getBasicProfile().getImageUrl();
+            userEntity.email = googleUser.getBasicProfile().getEmail();
+            userEntity.idToken = googleUser.getAuthResponse().id_token;
+
+            //Store the entity object in sessionStorage where it will be accessible from all pages of the site.
+            sessionStorage.setItem("userEntity", JSON.stringify(myUserEntity));
+
+
+            window.location.href = "feed.html";
         },
         function(error) {
-        	console.log("failed signin" + error);
+            console.log("failed signin" + error);
 
-            alert(JSON.stringify(error, undefined, 2));
+
         });
+}
+
+function checkIfLoggedIn() {
+    if (sessionStorage.getItem("userEntity") == null) {
+        return false;
+    } else {
+        return true;
+    }
 }
