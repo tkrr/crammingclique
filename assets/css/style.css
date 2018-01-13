@@ -7,13 +7,25 @@
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     max-width: 100%;
+    /* sticky footer */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /* end sticky footer */
 }
+
+  .main {
+    flex: 1 0 auto;
+  }
+
 
 /* topNav */
 
 
 /* bottomNav */
-
+.botmLinks {
+    padding-right: 20px;
+}
 
 /* media queries */
 /* // Small devices (landscape phones, 576px and up)
