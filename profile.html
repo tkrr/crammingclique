@@ -32,32 +32,30 @@
     <title>Cramming Clique</title>
 </head>
 
+<body>
     <!-- top navigation -->
     <div id="topNav">
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">Title</a>
-            <form class="form-inline">
-                <button class="btn btn-outline-success" type="button"><a href="feed.html">Explore</a></button>
-                <!-- link to create an event -->
-                <button class="btn btn-outline-success" type="button"><a href="#">Create</a></button>
-                <!-- link to events near -->
-                <button class="btn btn-outline-success" type="button"><a href="#">Near me</a></button>
-                <!-- user dropdown -->
-                <div class="dropdown">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        User
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Logout</a>
-                        <a class="dropdown-item" href="#">Profile</a>
-                    </div>
-                </div>
-            </form>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="profile.html">Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+                <ul class="right hide-on-med-and-down">
+                <li><a href="feed.html">Explore</a></li>
+                <li><a href="create.html">Create</a></li>
+                <li><a href="near.html">Near me</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">User<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
         </nav>
     </div>
 
-<!-- main container -->
-    <div id="profileContainer">
+    <!-- main container -->
+    <div id="profileContainer" class="main">
         <form id="needs-validation" novalidate>
             <div class="form-row">
                 <div class="col-md-4 mb-3">
