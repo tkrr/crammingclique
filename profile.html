@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!--  responsive behaviors -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- link to start with fresh styling -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <!-- link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- link to Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- link to Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- link to style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <!-- link to jQuery JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- link to load google API for signin -->
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <!-- link to load google firebase for data persistency -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
+    <title>Cramming Clique</title>
+</head>
+
+    <!-- top navigation -->
+    <div id="topNav">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Title</a>
+            <form class="form-inline">
+                <button class="btn btn-outline-success" type="button"><a href="feed.html">Explore</a></button>
+                <!-- link to create an event -->
+                <button class="btn btn-outline-success" type="button"><a href="#">Create</a></button>
+                <!-- link to events near -->
+                <button class="btn btn-outline-success" type="button"><a href="#">Near me</a></button>
+                <!-- user dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="#">Profile</a>
+                    </div>
+                </div>
+            </form>
+        </nav>
+    </div>
+
+<!-- main container -->
+    <div id="profileContainer">
+        <form id="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationName">Name</label>
+                    <input type="text" class="form-control" id="validationName" placeholder="Name" required>
+                </div>
+            <div class="col-md-4 mb-3">
+                <label for="userImg">Image</label>
+                <input type="text" class="form-control" id="userImage">
+            </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="phoneNum">Phone number</label>
+                    <input type="text" class="form-control" id="phoneNum" placeholder="Phone Number">
+                </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+            </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- bottom navigation -->
+    <div id="bottomNav">
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    <a class="grey-text text-lighten-4 left botmLinks" href="about.html">About</a>
+                    <a class="grey-text text-lighten-4 left botmLinks" href="contact.html">Contact</a>
+                    <span class="right">Copyright &copy; 2018 TKRR</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<!-- link to jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<!-- link to Materialize CDN -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+<!-- link to Popper CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!-- link to Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+<!-- link to my .js -->
+<!-- <script type="text/javascript" src="assets/javascript/login.js"></script> -->
+<script type="text/javascript" src="assets/javascript/index.js"></script>
+<script type="text/javascript" src="assets/javascript/feed.js"></script>
+<script type="text/javascript" src="assets/javascript/util.js"></script>
+
+</body>
+
+</html>
