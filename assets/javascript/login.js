@@ -49,6 +49,7 @@ function attachSignin(element) {
             database.ref("/crammingUsers").orderByChild("email").equalTo(googleUser.getBasicProfile().getEmail()).once("value", function(snapshot) {
                 console.log("record found: " + snapshot);
                 window.location.href = "feed.html";
+                return;
 
             });
             if (true) {
