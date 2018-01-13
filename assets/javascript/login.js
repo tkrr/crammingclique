@@ -1,3 +1,18 @@
+// Initialize Firebase
+var firebaseConfig = {
+    apiKey: "AIzaSyCxL4l6YBouk-C92wcTeZ_sZbzQDcR00hE",
+    authDomain: "crammingclique.firebaseapp.com",
+    databaseURL: "https://crammingclique.firebaseio.com",
+    projectId: "crammingclique",
+    storageBucket: "crammingclique.appspot.com",
+    messagingSenderId: "321767599885"
+};
+firebase.initializeApp(firebaseConfig);
+
+
+// Create a variable to reference the database
+var database = firebase.database();
+
 var googleAuth;
 var googleUser;
 
@@ -31,6 +46,19 @@ function attachSignin(element) {
             //Store the entity object in sessionStorage where it will be accessible from all pages of the site.
             sessionStorage.setItem("userEntity", JSON.stringify(userEntity));
 
+            database.ref("/crammingUsers/email").equalTo(googleUser.getBasicProfile().getEmail()).on("value", function(snapshot) {
+                console.log(snapshot);
+            });
+
+            var crammingUser = {
+                "id": empName,
+                "name": empRole,
+                "imageUrl": empStartDate,
+                "email": empRate,
+                "phone": ""
+            };
+
+            database.ref("/crammingUsers").push(crammingUser);
 
             window.location.href = "feed.html";
         },
@@ -42,10 +70,10 @@ function attachSignin(element) {
 }
 
 function signOut() {
-    googleAuth.signOut().then(function () {
-      console.log('User signed out.');
+    googleAuth.signOut().then(function() {
+        console.log('User signed out.');
     });
-  }
+}
 
 function checkIfLoggedIn() {
     if (sessionStorage.getItem("userEntity") == null) {
