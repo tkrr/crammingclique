@@ -23,7 +23,9 @@ body {
 
 
 /* bottomNav */
-
+.botmLinks {
+    padding-right: 20px;
+}
 
 /* media queries */
 /* // Small devices (landscape phones, 576px and up)
