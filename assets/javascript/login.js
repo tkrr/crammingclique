@@ -47,30 +47,29 @@ function attachSignin(element) {
             sessionStorage.setItem("userEntity", JSON.stringify(userEntity));
 
             database.ref("/crammingUsers").orderByChild("email").equalTo(googleUser.getBasicProfile().getEmail()).once("value", function(snapshot) {
-                console.log("record found: " + snapshot);
-                window.location.href = "feed.html";
-                return;
+
+                if (snapshot.val() !== null) {
+                    console.log("record found: " + snapshot);
+                    window.location.href = "feed.html";
+                    return;
+                } else {
+                    console.log("user is not null");
+                    var crammingUser = {
+                        "id": googleUser.getBasicProfile().getId(),
+                        "name": googleUser.getBasicProfile().getName(),
+                        "imageUrl": googleUser.getBasicProfile().getImageUrl(),
+                        "email": googleUser.getBasicProfile().getEmail(),
+                        "phone": ""
+                    };
+
+                    database.ref("/crammingUsers").push(crammingUser);
+                    window.location.href = "register.html";
+                }
 
             });
-            if (true) {
-                console.log("user is not null");
-                var crammingUser = {
-                    "id": googleUser.getBasicProfile().getId(),
-                    "name": googleUser.getBasicProfile().getName(),
-                    "imageUrl": googleUser.getBasicProfile().getImageUrl(),
-                    "email": googleUser.getBasicProfile().getEmail(),
-                    "phone": ""
-                };
-
-                database.ref("/crammingUsers").push(crammingUser);
-            }
-
-            window.location.href = "feed.html";
         },
         function(error) {
             console.log("failed signin" + error);
-
-
         });
 }
 
