@@ -46,10 +46,12 @@ function attachSignin(element) {
             //Store the entity object in sessionStorage where it will be accessible from all pages of the site.
             sessionStorage.setItem("userEntity", JSON.stringify(userEntity));
 
-            var user = database.ref("/crammingUsers").orderByChild("email").equalTo(googleUser.getBasicProfile().getEmail());
-            console.log("user in db: " + user);
-            if (user === null) {
-                console.log("user is null");
+            database.ref("/crammingUsers").orderByChild("email").equalTo(googleUser.getBasicProfile().getEmail()) on("value", function(snapshot) {
+                console.log(snapshot);
+
+            });
+            if (true) {
+                console.log("user is not null");
                 var crammingUser = {
                     "id": googleUser.getBasicProfile().getId(),
                     "name": googleUser.getBasicProfile().getName(),
