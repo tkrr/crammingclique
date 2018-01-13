@@ -5,11 +5,15 @@
     <meta charset="utf-8">
     <!--  responsive behaviors -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- link to start with fresh styling -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <!-- link to Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- link to Google fonts -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- link to Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- link to my stylesheet -->
@@ -19,7 +23,7 @@
     <!-- link to jQuery JS -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- link to load google API for signin -->
-    <script src="https://apis.google.com/js/api:client.js"></script>
+    <!-- <script src="#"></script> -->
 
     <title>Cramming Clique</title>
 </head>
@@ -27,53 +31,65 @@
 <body>
     <!-- top navigation -->
     <div id="topNav">
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">Cramming Clique or Cliq and Cram</a>
-                <!-- button that goes to signup form -->
-                <button class="btn btn-outline-success" type="button" id="btn-signUp">Sign Up</button>
-                <!-- button that goes to login form -->
-                <button class="btn btn-outline-success" type="button" id="btn-login">Login</button>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">Cramming Clique</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="register.html">Sign up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
         </nav>
     </div>
 
     <!-- main container -->
-    <div id="landingContainer">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5 class="card-title">Title if we want</h5>
-                <p class="card-text">Description of app.<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet ultrices mi, ac lacinia quam. In sem odio, sagittis dignissim porta sit amet, egestas nec dolor. Vestibulum aliquet vulputate augue, in hendrerit nibh pellentesque sed. Integer pretium tortor id condimentum condimentum. Vivamus eget lorem lacus. Sed mauris diam, finibus ut lorem at, varius dignissim ipsum. Integer in dictum elit.</p>
-                <!-- button that goes to signup form -->
-                <a href="register.html" class="btn btn-primary">Sign up</a>
+    <div id="landingContainer" class="main">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Title if we want</span>
+                        <p>Description<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut pretium neque. Aenean consequat volutpat augue, et dictum neque bibendum nec. Duis tincidunt nulla id enim vulputate imperdiet. Nulla sed vehicula odio, sit amet finibus risus. Etiam at hendrerit leo. Maecenas eleifend nisi nec nibh iaculis, varius malesuada tellus egestas. Pellentesque eget erat egestas, sollicitudin felis eget, feugiat diam.</p>
+                    </div>
+                    <a class="btn btn-primary" href="register.html" role="button">Sign up</a>
+                </div>
             </div>
         </div>
-                            <button class="btn btn-outline-success" type="button"><a href="feed.html">Explore</a></button> this button won't be here
     </div>
 
     <!-- bottom navigation -->
     <div id="bottomNav">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <!-- link to about pg -->
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <!-- link to contact pg -->
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-                <span class="navbar-text">
-                    Copyright &copy; 2018 TKRR
-                </span>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </nav>
+            <div class="footer-copyright">
+                <div class="container">
+                    Copyright &copy; 2018 TKRR
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
     </div>
 
 <!-- link to jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <!-- link to Materialize CDN -->
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css"></script>
 <!-- link to Popper CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <!-- link to Bootstrap JS -->
@@ -83,4 +99,5 @@
 <script type="text/javascript" src="assets/javascript/login.js"></script>
 
 </body>
+
 </html>
