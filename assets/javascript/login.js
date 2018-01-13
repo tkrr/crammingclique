@@ -46,7 +46,7 @@ function attachSignin(element) {
             //Store the entity object in sessionStorage where it will be accessible from all pages of the site.
             sessionStorage.setItem("userEntity", JSON.stringify(userEntity));
 
-            var user = database.ref("/crammingUsers/email").equalTo(googleUser.getBasicProfile().getEmail());
+            var user = database.ref("/crammingUsers").orderByChild("email").equalTo(googleUser.getBasicProfile().getEmail());
             console.log("user in db: " + user);
             if (user === null) {
                 console.log("user is null");
