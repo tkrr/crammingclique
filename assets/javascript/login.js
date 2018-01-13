@@ -51,10 +51,10 @@ function attachSignin(element) {
             });
 
             var crammingUser = {
-                "id": empName,
-                "name": empRole,
-                "imageUrl": empStartDate,
-                "email": empRate,
+                "id": googleUser.getBasicProfile().getId(),
+                "name": googleUser.getBasicProfile().getName(),
+                "imageUrl": googleUser.getBasicProfile().getImageUrl(),
+                "email": googleUser.getBasicProfile().getEmail(),
                 "phone": ""
             };
 
