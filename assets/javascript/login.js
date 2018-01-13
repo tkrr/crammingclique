@@ -47,7 +47,8 @@ function attachSignin(element) {
             sessionStorage.setItem("userEntity", JSON.stringify(userEntity));
 
             database.ref("/crammingUsers").orderByChild("email").equalTo(googleUser.getBasicProfile().getEmail()).once("value", function(snapshot) {
-                console.log(snapshot);
+                console.log("record found: " + snapshot);
+                window.location.href = "feed.html";
 
             });
             if (true) {
