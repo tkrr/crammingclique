@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!--  responsive behaviors -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- link to start with fresh styling -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <!-- link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- link to Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- link to Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- link to style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <!-- link to jQuery JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- link to load google API for signin -->
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <!-- link to load google firebase for data persistency -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
+    <title>Cramming Clique</title>
+</head>
+
+<body>
+    <!-- top navigation -->
+    <div id="topNav">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="profile.html">Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+                <ul class="right hide-on-med-and-down">
+                <li><a href="feed.html">Explore</a></li>
+                <li><a href="create.html">Create</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">User<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- main container -->
+    <div id="createContainer">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="user" type="text" class="validate">
+                        <label for="user">User</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="eventTitle" type="text" class="validate">
+                        <label for="title">Title</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="description" type="text" class="validate">
+                        <label for="description">Description</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="date" type="text" class="validate">
+                        <label for="date">Date</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="time" type="text" class="validate">
+                        <label for="time">Time</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- bottom navigation -->
+    <div id="bottomNav">
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    <a class="grey-text text-lighten-4 left botmLinks" href="contact.html">Contact</a>
+                    <span class="right">Copyright &copy; 2018 TKRR</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<!-- link to jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<!-- link to Materialize CDN -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+<!-- link to Popper CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!-- link to Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+<!-- link to my .js -->
+<!-- <script type="text/javascript" src="assets/javascript/login.js"></script> -->
+<script type="text/javascript" src="assets/javascript/index.js"></script>
+<script type="text/javascript" src="assets/javascript/feed.js"></script>
+<script type="text/javascript" src="assets/javascript/util.js"></script>
+
+</body>
+
+</html>
