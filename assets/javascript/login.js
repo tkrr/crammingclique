@@ -13,41 +13,34 @@ firebase.initializeApp(firebaseConfig);
 // Create a variable to reference the database
 var database = firebase.database();
 
+// Google login initialization
 var googleAuth;
 var googleUser;
-
 gapi.load("auth2", function() {
     googleAuth = gapi.auth2.init({
         client_id: "245751156594-tp337vitvvl9ltm4jhpoirm249v20tsf.apps.googleusercontent.com",
         scope: "profile"
     });
-    console.log("api initialized");
-
-    attachSignin(document.getElementById("btn-login"));
+    googleLogin(document.getElementById("btnLogin"));
 });
 
 
-function attachSignin(element) {
+function googleLogin(element) {
     console.log(element);
     googleAuth.attachClickHandler(element, {},
         function(googleUser) {
-            console.log("success signin");
-            //$("#btn-login").text("Sign Out");
-            console.log(googleUser.getBasicProfile().getName());
-            console.log(googleUser.getBasicProfile().getImageUrl());
-
-            var userEntity = {};
-            userEntity.id = googleUser.getBasicProfile().getId();
-            userEntity.name = googleUser.getBasicProfile().getName();
-            userEntity.imageUrl = googleUser.getBasicProfile().getImageUrl();
-            userEntity.email = googleUser.getBasicProfile().getEmail();
-            userEntity.idToken = googleUser.getAuthResponse().id_token;
+            console.log("google login successful");
 
             //Store the entity object in sessionStorage where it will be accessible from all pages of the site.
-            sessionStorage.setItem("userEntity", JSON.stringify(userEntity));
+            var userSessionEntity = {};
+            userSessionEntity.id = googleUser.getBasicProfile().getId();
+            userSessionEntity.name = googleUser.getBasicProfile().getName();
+            userSessionEntity.imageUrl = googleUser.getBasicProfile().getImageUrl();
+            userSessionEntity.email = googleUser.getBasicProfile().getEmail();
+            userSessionEntity.idToken = googleUser.getAuthResponse().id_token;
+            sessionStorage.setItem("userSessionEntity", JSON.stringify(userSessionEntity));
 
             database.ref("/crammingUsers").orderByChild("email").equalTo(googleUser.getBasicProfile().getEmail()).once("value", function(snapshot) {
-
                 if (snapshot.val() !== null) {
                     console.log("record found: " + snapshot);
                     window.location.href = "feed.html";
@@ -59,11 +52,11 @@ function attachSignin(element) {
                         "name": googleUser.getBasicProfile().getName(),
                         "imageUrl": googleUser.getBasicProfile().getImageUrl(),
                         "email": googleUser.getBasicProfile().getEmail(),
-                        "phone": ""
+                        "phone": "",
+                        "receiveTextNotification": true
                     };
-
                     database.ref("/crammingUsers").push(crammingUser);
-                    window.location.href = "register.html";
+                    window.location.href = "profile.html";
                 }
 
             });
@@ -80,7 +73,7 @@ function signOut() {
 }
 
 function checkIfLoggedIn() {
-    if (sessionStorage.getItem("userEntity") == null) {
+    if (sessionStorage.getItem("userSessionEntity") == null) {
         return false;
     } else {
         return true;
