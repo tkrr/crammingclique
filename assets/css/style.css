@@ -44,7 +44,7 @@ a:hover {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 750px;
+    height: 100%;
 }
 .vline {
     border-right: 1px solid;
