@@ -48,9 +48,39 @@ a:hover {
     flex: 1 0 auto;
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    height: 750px;
 }
 
+.vdivide {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}
+
+/* index page */
+.landingContainer {
+    height: 1064px;
+}
+
+.landingCard {
+    margin-top: 100px;
+}
+
+.opacity {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.registerBtn {
+    margin-top: 20px;
+}
+/* end index page */
 
 /* bottomNav */
 .botmLinks {
@@ -61,15 +91,30 @@ a:hover {
     background-color: #F4E8CE;
 }
 
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    display: block;
+    text-align: center;
+  }
+
 /* media queries */
-/* // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+}
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... } */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
+}
