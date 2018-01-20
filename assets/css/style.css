@@ -8,7 +8,6 @@ body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     max-width: 100%;
 
-
     /* sticky footer */
     display: flex;
     min-height: 100vh;
@@ -21,7 +20,7 @@ body {
     border: 0px solid;
 }
 
-.textRed {
+.redText {
     color: #BB2B10;
 }
 
@@ -29,28 +28,37 @@ a:hover {
     color: green;
 }
 
+.btn-primary {
+    border: 3px solid;
+    border-color: #ffffff;
+}
+
 
 /* topNav */
-
+.login {
+    padding-right: 20px;
+}
 
 .nav-wrapper {
     background-color: #F4E8CE;
 }
 
-
 /* main containers */
 .main {
     flex: 1 0 auto;
     background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
-
-
-
 
 
 /* bottomNav */
 .botmLinks {
     padding-right: 20px;
+}
+
+.page-footer {
+    background-color: #F4E8CE;
 }
 
 /* media queries */
