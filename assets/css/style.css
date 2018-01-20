@@ -14,36 +14,31 @@ body {
     flex-direction: column;
     /* end sticky footer */
 }
-
 .transparent {
     background: transparent;
     border: 0px solid;
 }
-
 .redText {
     color: #BB2B10;
 }
-
 a:hover {
     color: green;
 }
-
 .btn-primary {
     border: 3px solid;
     border-color: #ffffff;
 }
 
-
 /* topNav */
 .login {
     padding-right: 20px;
 }
-
 .nav-wrapper {
     background-color: #F4E8CE;
 }
+/* end topNav */
 
-/* main containers */
+/* main */
 .main {
     flex: 1 0 auto;
     background-image: url("../images/background.jpg");
@@ -51,52 +46,54 @@ a:hover {
     background-size: cover;
     height: 750px;
 }
-
-.vdivide {
-  background: #e0e0e0;
-  width: 1px;
-  content: "";
-  display:block;
-  position: absolute;
-  top:0;
-  bottom: 0;
-  right: 0;
-  min-height: 70px;
+.vline {
+    border-right: 1px solid;
 }
+.vdivide {
+    background: #000000;
+    width: 1px;
+    content: "";
+    display:block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    min-height: 70px;
+}
+/* end main */
 
 /* index page */
 .landingContainer {
     height: 1064px;
 }
-
 .landingCard {
     margin-top: 100px;
 }
-
 .opacity {
     background-color: rgba(0, 0, 0, 0.5);
 }
-
 .registerBtn {
     margin-top: 20px;
 }
 /* end index page */
 
+/* feed */
+.cliqSearch {
+
+}
+.feedCard{
+    background-color: #4B576F;
+}
+/* end feed */
+
 /* bottomNav */
 .botmLinks {
     padding-right: 20px;
 }
-
 .page-footer {
     background-color: #F4E8CE;
 }
-
-
-@media screen and (max-width: 1024px) {
-  h1 {
-    display: block;
-    text-align: center;
-  }
+/* end bottomNav */
 
 /* media queries */
 /* Small devices (landscape phones, 576px and up) */
