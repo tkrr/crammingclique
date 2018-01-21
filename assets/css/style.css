@@ -7,6 +7,8 @@
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     max-width: 100%;
+    height: 100%;
+    margin: 0;
 
     /* sticky footer */
     display: flex;
@@ -39,9 +41,16 @@ a:hover {
 /* end topNav */
 
 /* main */
-.main {
+.mainI {
     flex: 1 0 auto;
     background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.main {
+    flex: 1 0 auto;
+    background-image: url("../images/backgroundT.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -58,7 +67,11 @@ a:hover {
     top:0;
     bottom: 0;
     right: 0;
-    min-height: 70px;
+    min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
 }
 /* end main */
 
@@ -98,6 +111,12 @@ a:hover {
 }
 .page-footer {
     background-color: #F4E8CE;
+}
+.footer{
+    height: 50px;
+}
+.push {
+  height: 50px;
 }
 /* end bottomNav */
 

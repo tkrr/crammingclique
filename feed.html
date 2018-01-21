@@ -10,7 +10,7 @@
 
 
     <!-- link for Ravish start -->
-    <script type="text/javascript" src="assets/javascript/util.js"></script>
+    <!-- <script type="text/javascript" src="assets/javascript/util.js"></script> -->
     <!-- link for Ravish end -->
 
 
@@ -80,18 +80,47 @@
 
         <!-- created events -->
         <div id="divCliques">
-              <div class="row">
-                <div class="col s12 m6">
-                    <div class="card">
-                        <span class="card-title">Card Title</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                            </div>
+            <div class="card-deck">
+                <div class="col-4 card text-center feedCard">
+                    <div class="card-body">
+                        <p class="card-title align-text-bottom">Clique Title</p>
+                        <a class="btn-floating waves-effect waves-light red" data-toggle="modal" data-href="cliqPop.html"><i class="material-icons">add</i></a>
+                        <p class="card-text align-text-bottom">number of people attending</p>
                     </div>
-    </div>
-  </div>
+                </div>
+
+                <div class="col-4 card text-center feedCard">
+                    <div class="card-body">
+                        <p class="card-title align-text-bottom">Clique Title</p>
+                        <a class="btn-floating waves-effect waves-light red" data-toggle="modal" data-href="cliqPop.html"><i class="material-icons">add</i></a>
+                        <p class="card-text align-text-bottom">number of people attending</p>
+                    </div>
+                </div>
+
         </div>
+
+<div class="card-deck">
+<div class="col-4 card text-center feedCard">
+    <div class="card-body">
+  <img class="card-img" src="assets/images/eventBox.jpg" alt="Card image">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text">Last updated 3 mins ago</p>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+        <div class="push"></div>
+
     </div>
 
     <!-- bottom navigation -->
@@ -120,7 +149,9 @@
     <!-- <script type="text/javascript" src="assets/javascript/dbutil.js"></script> -->
     <!-- <script type="text/javascript" src="assets/javascript/feed.js"></script> -->
     <!-- link for Ravish end -->
-
+<script>
+    $('#myModal').modal("show")
+</script>
 
 
 
