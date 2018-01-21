@@ -113,41 +113,31 @@ async function registerCliques(cliqueId, user) {
 
 
 async function deregisterCliques(cliqueId, user) {
-    console.log("In function deregisterCliques " + user);
-    var clique;
-    var cliqueKey;
-    var attendeeKey;
-    var cliqueSnapshots = await database.ref("/crammingClique").orderByChild("id").equalTo(cliqueId).once("value");
-    
-    if (cliqueSnapshots.val() === null) {
-        console.log("Error: Clique not found");
+    console.log("I am at 2 " + user);
+
+    var cliqueSnapshot = await database.ref("/crammingClique").orderByChild("id").equalTo(cliqueId).once("value");
+    console.log(cliqueSnapshot);
+        console.log(cliqueSnapshot.child("attendees").orderByChild("attendee").equalTo(user).key);
+    //console.log(cliqueSnapshot.ref.child("attendees").orderByChild("attendee").equalTo(user).once("value"));
+    var tempattendee = await cliqueSnapshot.ref.child("attendees").orderByChild("attendee").equalTo(user).once("value");
+    console.log(tempattendee);
+
+    if (cliqueSnapshot.val() === null) {
+        console.log("Error!! record not found: ");
         return false;
     } else {
-        console.log("Cliques found");
-        cliqueSnapshots.forEach( function(element) {
-            cliqueKey = element.key;
-            clique = element.val();
+        console.log("user found");
+        cliqueSnapshot.forEach(function(child) {
+            //child.ref.remove();
+            console.log(child.ref.child("attendees").orderByChild("attendee").equalTo(user).once("value").val());
+            var attendeeNode = child.ref.child("attendees").orderByChild("attendee").equalTo(user).once("value");
+            console.log(attendeeNode.val());
+            attendeeNode.forEach(function(itemSnapshot) {
+                itemSnapshot.ref.remove();
+            });
+            //attendeeNode.ref.remove();
+            console.log("removed attendees");
         });
-        console.log(cliqueKey);
-        console.log(clique);
-
+        return true;
     }
-
-    console.log(clique.attendees);
-
-    Object.keys(clique.attendees).map(function(key) {
-        if (clique.attendees[key].attendee === user) {
-            attendeeKey = key;
-        }
-    });
-
-    if (attendeeKey !== null) {
-        await database.ref("/crammingClique/" + cliqueKey + "/attendees/" + attendeeKey).remove();
-        console.log("Attendee removed");
-        return true
-    } else {
-        console.log("Attendee not found");
-        return false;
-    }
-
 };

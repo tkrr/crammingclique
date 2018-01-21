@@ -27,9 +27,9 @@ $(function() {
             "where": $("#eventLoc").val(),
             "date": $("#eventDt").val(),
             "time": $("#eventTm").val(),
-            "attendees": [{
+            "attendees": [/*{
                 "attendee": userSessionEntity.email//"ravish.rao@gmail.com"//
-            }]
+            }*/]
         };
 
         try {
