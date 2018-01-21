@@ -9,7 +9,7 @@
 
 
     <!-- link for Ravish start -->
-    <script type="text/javascript" src="assets/javascript/util.js"></script>
+    <!-- <script type="text/javascript" src="assets/javascript/util.js"></script> -->
     <!-- link for Ravish end -->
 
 
@@ -35,7 +35,7 @@
 
     <!-- link for Ravish start -->
     <!-- link to load google API for signin -->
-    <script src="https://apis.google.com/js/api:client.js"></script>
+    <!-- <script src="https://apis.google.com/js/api:client.js"></script> -->
     <!-- link to load google firebase for data persistency -->
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <!-- link for Ravish end -->
@@ -80,13 +80,19 @@
             </div>
             </div>
             <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationName" >Email</label>
+                    <input type="text" readonly class="form-control-plaintext" id="emailinput" value="yourname@email.com">
+                </div>
+            </div>
+            <div class="form-row">
                 <div class="col-md-3 mb-3">
                     <label for="phoneNum">Phone number</label>
                     <input type="text" class="form-control" id="phoneNum" placeholder="Phone Number">
                 </div>
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                <label class="custom-control-label" for="customCheck1">Get Notifications</label>
             </div>
                 <button id="saveProfileButton" class="btn btn-primary" type="submit">Submit form</button>
             </div>
