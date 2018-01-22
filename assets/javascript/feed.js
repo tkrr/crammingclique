@@ -1,4 +1,7 @@
 $(function() {
+    $(".dropdown-button").dropdown();
+    $(".button-collapse").sideNav();
+
     //get the current user from session
     //get the current user from session 
     var userSessionEntity = {
@@ -105,7 +108,7 @@ $(function() {
             var divModalFooter = $("<div>").addClass("modal-footer");
             if (userSessionEntity.email === clique.host) {
                 //divClique.append($("<btn>").addClass("btn btn-primary").attr("id", "cliqueManage").text("Manage"));
-                var btnCliqueManage = $("<button>").addClass("btn btn-secondary").attr("id", "cliqueManage").text("Manage");
+                var btnCliqueManage = $("<button>").addClass("btn btn-secondary").attr("id", "cliqueManage").attr("data-info",clique.id).text("Manage");
                 divModalFooter.append(btnCliqueManage);
 
             } else {
@@ -113,12 +116,12 @@ $(function() {
                 //for events for which user is already attending, have the derister button
                 if (attending === true) {
                     //divClique.append($("<btn>").addClass("btn btn-primary").attr("id", "cliqueDeRegister").text("De-register"));
-                    var btnCliqueManage = $("<button>").addClass("btn btn-secondary").attr("id", "cliqueDeRegister").text("De-register");
+                    var btnCliqueManage = $("<button>").addClass("btn btn-secondary").attr("id", "cliqueDeRegister").attr("data-info",clique.id).text("De-register");
                     divModalFooter.append(btnCliqueManage);
 
                 } else {
                     //divClique.append($("<btn>").addClass("btn btn-primary").attr("id", "cliqueRegister").text("Register"));
-                    var btnCliqueManage = $("<button>").addClass("btn btn-secondary").attr("id", "cliqueRegister").text("Register");
+                    var btnCliqueManage = $("<button>").addClass("btn btn-secondary").attr("id", "cliqueRegister").attr("data-info",clique.id).text("Register");
                     divModalFooter.append(btnCliqueManage);
 
                 }
@@ -154,7 +157,7 @@ $(function() {
     $(document).on("click", "#cliqueRegister", async function(event) {
         console.log("In function #cliqueRegister");
 
-        var cliqueId = $(this).closest("div").attr("id");
+        var cliqueId = $(this).attr("data-info");
         await registerCliques(cliqueId, userSessionEntity.email);
         $(this).text("De-Register");
         $(this).attr("id", "cliqueDeRegister");
@@ -168,7 +171,7 @@ $(function() {
     $(document).on("click", "#cliqueDeRegister", async function(event) {
         console.log("In function #cliqueDeRegister");
 
-        var cliqueId = $(this).closest("div").attr("id");
+        var cliqueId = $(this).attr("data-info");
         await deregisterCliques(cliqueId, userSessionEntity.email);
         $(this).text("Register");
         $(this).attr("id", "cliqueRegister");
