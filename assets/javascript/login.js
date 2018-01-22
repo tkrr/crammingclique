@@ -22,6 +22,8 @@ gapi.load("auth2", function() {
         scope: "profile"
     });
     googleLogin(document.getElementById("btnLogin"));
+    googleLogin(document.getElementById("btnRegisterNewUser"));
+
 });
 
 
