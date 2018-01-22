@@ -13,27 +13,36 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
 async function getUserDetailsByEmail(email) {
-    console.log("In function getUserDetailsByEmail");
+    console.log("I am at 2");
+
     var usersSnapshot = await database.ref("/crammingUsers").orderByChild("email").equalTo(email).once("value");
+    console.log(usersSnapshot.val());
     var users = [];
     if (usersSnapshot.val() === null) {
+        console.log("Error!! record not found: ");
         return null;
     } else {
+        console.log("user found");
         usersSnapshot.forEach(function(child) {
+            console.log(child.val());
             users.push(child.val());
         });
+        console.log(users);
         return users;
     }
 };
 
 async function updateUserDetailsByEmail(email, userDetails) {
-    console.log("In function updateUserDetailsByEmail");
+    console.log("I am at 2");
 
     var usersSnapshot = await database.ref("/crammingUsers").orderByChild("email").equalTo(email).once("value");
+    console.log(usersSnapshot.val());
 
     if (usersSnapshot.val() === null) {
+        console.log("Error!! record not found: ");
         return false;
     } else {
+        console.log("user found");
         usersSnapshot.forEach(function(child) {
             child.ref.update(userDetails);
         });
@@ -42,13 +51,13 @@ async function updateUserDetailsByEmail(email, userDetails) {
 };
 
 async function insertNewUserDetails(userDetails) {
-    console.log("In function updateUserDetailsByEmail");
+    console.log("I am at 2");
 
     await database.ref("/crammingUsers").push(crammingUser);
 };
 
 async function insertNewEventDetails(crammingClique) {
-    console.log("In function insertNewEventDetails");
+    console.log("I am at 2");
 
     try {
         var newCliqueSnapshot = await database.ref("/crammingClique").push(crammingClique);
@@ -62,32 +71,41 @@ async function insertNewEventDetails(crammingClique) {
 };
 
 async function getAllCliques() {
-    console.log("In function getAllCliques");
+    console.log("I am at 2");
 
     var cliqueSnapshot = await database.ref("/crammingClique").orderByChild("date").once("value");
+    console.log(cliqueSnapshot.val());
     var cliques = [];
     if (cliqueSnapshot.val() === null) {
+        console.log("Error!! record not found: ");
         return null;
     } else {
+        console.log("cliques found");
         cliqueSnapshot.forEach(function(clique) {
+            console.log(clique.val());
             cliques.push(clique.val());
         });
+        console.log(cliques);
         return cliques;
     }
 };
 
 async function registerCliques(cliqueId, user) {
-    console.log("In function registerCliques");
+    console.log("I am at 2");
 
     var cliqueSnapshot = await database.ref("/crammingClique").orderByChild("id").equalTo(cliqueId).once("value");
+    console.log(cliqueSnapshot.val());
 
     if (cliqueSnapshot.val() === null) {
+        console.log("Error!! record not found: ");
         return false;
     } else {
+        console.log("user found");
         cliqueSnapshot.forEach(function(child) {
             child.ref.child("attendees").push({
                 "attendee": user
             });
+            console.log("updated attendees");
         });
         return true;
     }
@@ -95,33 +113,31 @@ async function registerCliques(cliqueId, user) {
 
 
 async function deregisterCliques(cliqueId, user) {
-    console.log("In function deregisterCliques");
-    var clique;
-    var cliqueKey;
-    var attendeeKey;
-    var cliqueSnapshots = await database.ref("/crammingClique").orderByChild("id").equalTo(cliqueId).once("value");
-    
-    if (cliqueSnapshots.val() === null) {
+    console.log("I am at 2 " + user);
+
+    var cliqueSnapshot = await database.ref("/crammingClique").orderByChild("id").equalTo(cliqueId).once("value");
+    console.log(cliqueSnapshot);
+        console.log(cliqueSnapshot.child("attendees").orderByChild("attendee").equalTo(user).key);
+    //console.log(cliqueSnapshot.ref.child("attendees").orderByChild("attendee").equalTo(user).once("value"));
+    var tempattendee = await cliqueSnapshot.ref.child("attendees").orderByChild("attendee").equalTo(user).once("value");
+    console.log(tempattendee);
+
+    if (cliqueSnapshot.val() === null) {
+        console.log("Error!! record not found: ");
         return false;
     } else {
-        cliqueSnapshots.forEach( function(element) {
-            cliqueKey = element.key;
-            clique = element.val();
+        console.log("user found");
+        cliqueSnapshot.forEach(function(child) {
+            //child.ref.remove();
+            console.log(child.ref.child("attendees").orderByChild("attendee").equalTo(user).once("value").val());
+            var attendeeNode = child.ref.child("attendees").orderByChild("attendee").equalTo(user).once("value");
+            console.log(attendeeNode.val());
+            attendeeNode.forEach(function(itemSnapshot) {
+                itemSnapshot.ref.remove();
+            });
+            //attendeeNode.ref.remove();
+            console.log("removed attendees");
         });
-
+        return true;
     }
-
-    Object.keys(clique.attendees).map(function(key) {
-        if (clique.attendees[key].attendee === user) {
-            attendeeKey = key;
-        }
-    });
-
-    if (attendeeKey !== null) {
-        await database.ref("/crammingClique/" + cliqueKey + "/attendees/" + attendeeKey).remove();
-        return true
-    } else {
-        return false;
-    }
-
 };

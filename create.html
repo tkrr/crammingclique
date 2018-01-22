@@ -6,13 +6,9 @@
     <!--  responsive behaviors -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- link for Ravish start -->
-    <script type="text/javascript" src="assets/javascript/util.js"></script>
+    <!--<script type="text/javascript" src="assets/javascript/util.js"></script>-->
     <!-- link for Ravish end -->
-
-
-
     <!-- link to start with fresh styling -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <!-- link to Bootstrap CSS -->
@@ -21,6 +17,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- link to Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Compiled and minified CSS -->
     <!-- link to Materialize icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- link to style.css -->
@@ -29,9 +26,8 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <!-- link to jQuery JS -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-
-
-
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- link for Ravish start -->
     <!-- link to load google API for signin -->
     <script src="https://apis.google.com/js/api:client.js"></script>
@@ -40,9 +36,6 @@
     <!-- link to load google map API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnu3Zo-ouryCvnyyujvA8d3e4ANJ2d824&libraries=places" async defer></script>
     <!-- link for Ravish end -->
-
-
-
     <title>Cramming Clique</title>
 </head>
 
@@ -56,55 +49,67 @@
         </ul>
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Logo</a>
+                <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="feed.html">Explore</a></li>
-                    <li><a href="create.html">Create</a></li>
+                    <li><a href="feed.html" class="redText vline">Explore</a></li>
+                    <li><a href="create.html" class="redText vline">Create</a></li>
                     <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">User<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
                 </ul>
             </div>
         </nav>
     </div>
     <!-- main container -->
-    <div id="createContainer">
+    <div class="container" id="createContainer">
         <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <img src="#" id="userImg"> User Name</div>
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-title m-0 teal text-white">
+                        <div class="row m-0">
+                                <div class="m-auto">
+                                    <h5 class="">Hosted by <strong>Ravish Rao    </strong><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle" width="50" height="50"></h5>
+                                    
+                                </div>
+                        </div>        
+                    </div>
+                    <div class="card-content mt-2 pt-0">
+                        <form class="container" id="newCrammingCluqueEvent">
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s12">
+                                    <input id="eventTitle" type="text"  placeholder="">
+                                    <label for="title">Title</label>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s12">
+                                    <textarea id="eventDesc" class="materialize-textarea"  placeholder=""></textarea>
+                                    <label for="eventDesc">Description</label>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s12">
+                                    <input id="eventLoc" type="text" placeholder="" >
+                                    <label for="eventLoc">Location</label>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s6">
+                                    <input id="eventDt" type="text" class="datepicker"  placeholder="">
+                                    <label for="dateTime">Date</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="eventTm" type="text" class="timepicker"  placeholder="">
+                                    <label for="eventTm">Time</label>
+                                </div>
+                            </div>
+                            <div class="row mt-0 mb-0">
+                                <button class="btn waves-effect mdl-button--raised waves-light m-auto teal" type="submit" name="action" id="btnCreateEvent">Create Event</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="input-field col s6">
-                    <input id="eventTitle" type="text" class="validate">
-                    <label for="title">Title</label>
-                </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="eventDesc" type="text" class="validate">
-                <label for="description">Description</label>
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="eventLoc" type="text">
-                <label for="eventLoc">Location</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s6">
-                <input id="eventDt" type="text" class="validate">
-                <label for="dateTime">Date</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="eventTm" type="text" class="validate">
-                <label for="eventTm">Time</label>
-            </div>
-            <!-- 3 values to button -->
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="btnCreateEvent">Submit</button>
-        </div>
-        </form>
-    </div>
     </div>
     <!-- bottom navigation -->
     <div id="bottomNav">
@@ -117,14 +122,6 @@
             </div>
         </footer>
     </div>
-    <!-- link to jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <!-- link to Materialize CDN -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
-    <!-- link to Popper CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <!-- link to Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <!-- link for Ravish start -->
     <script type="text/javascript" src="assets/javascript/login.js"></script>
     <script type="text/javascript" src="assets/javascript/dbutil.js"></script>
