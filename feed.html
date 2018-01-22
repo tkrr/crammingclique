@@ -56,7 +56,7 @@
         </ul>
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
+                <a href="#!" class="brand-logo"><img class="logo" src="assets/images/logoClear.png"></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="feed.html" class="redText vline">Explore</a></li>
                     <li><a href="create.html" class="redText vline">Create</a></li>
@@ -72,83 +72,129 @@
 
         <!-- search button -->
         <div class="search-wrapper">
-            <div class="input-group col-6 mx-auto mb-3">
+            <div class="input-group col-4 mx-auto mb-3">
                 <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
-                <button class="btn btn-outline-secondary" type="button"><i class="material-icons">search</i></button>
+                <button class="col-2 btn btn-outline-secondary" type="button"><i class="material-icons">search</i></button>
             </div>
         </div>
 
         <!-- created events -->
         <div id="divCliques">
-            <div class="card-deck">
-                <div class="col-4 card text-center feedCard">
-                    <div class="card-body">
-                        <p class="card-title align-text-bottom">Clique Title</p>
-                        <a class="btn-floating waves-effect waves-light red" data-toggle="modal" data-href="cliqPop.html"><i class="material-icons">add</i></a>
-                        <p class="card-text align-text-bottom">number of people attending</p>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card feedCard">
+                        <div class="card-block">
+                            <h3 class="card-title feedCardTitle">Event Title</h3>
+                        </div>
+                        <div class="card-footer feedCardFooter">
+                            Number of people attending
+                            <!-- modal button trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch modal</button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-4 card text-center feedCard">
-                    <div class="card-body">
-                        <p class="card-title align-text-bottom">Clique Title</p>
-                        <a class="btn-floating waves-effect waves-light red" data-toggle="modal" data-href="cliqPop.html"><i class="material-icons">add</i></a>
-                        <p class="card-text align-text-bottom">number of people attending</p>
+                <div class="col-sm-3">
+                    <div class="card feedCard">
+                        <div class="card-block">
+                            <h3 class="card-title feedCardTitle">Event Title</h3>
+                        </div>
+                        <div class="card-footer feedCardFooter">
+                            Number of people attending
+                            <!-- modal button trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch modal</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-4 card text-center feedCard">
-                    <div class="card-body">
-                        <p class="card-title align-text-bottom">Clique Title</p>
-                        <a class="btn-floating waves-effect waves-light red" data-toggle="modal" data-href="cliqPop.html"><i class="material-icons">add</i></a>
-                        <p class="card-text align-text-bottom">number of people attending</p>
+                <div class="col-sm-3">
+                    <div class="card feedCard">
+                        <div class="card-block">
+                            <h3 class="card-title feedCardTitle">Event Title</h3>
+                        </div>
+                        <div class="card-footer feedCardFooter">
+                            Number of people attending
+                            <!-- modal button trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch modal</button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-4 card text-center feedCard">
-                    <div class="card-body">
-                        <p class="card-title align-text-bottom">Clique Title</p>
-                        <a class="btn-floating waves-effect waves-light red" data-toggle="modal" data-href="cliqPop.html"><i class="material-icons">add</i></a>
-                        <p class="card-text align-text-bottom">number of people attending</p>
+                <div class="col-sm-3">
+                    <div class="card feedCard">
+                        <div class="card-block">
+                            <h3 class="card-title feedCardTitle">Event Title</h3>
+                        </div>
+                        <div class="card-footer feedCardFooter">
+                            Number of people attending
+                            <!-- modal button trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch modal</button>
+                        </div>
                     </div>
                 </div>
-                                <div class="col-4 card text-center feedCard">
-                    <div class="card-body">
-                        <p class="card-title align-text-bottom">Clique Title</p>
-                        <a class="btn-floating waves-effect waves-light red" data-toggle="modal" data-href="cliqPop.html"><i class="material-icons">add</i></a>
-                        <p class="card-text align-text-bottom">number of people attending</p>
+                <div class="col-sm-3">
+                    <div class="card feedCard">
+                        <div class="card-block">
+                            <h3 class="card-title feedCardTitle">Event Title</h3>
+                        </div>
+                        <div class="card-footer feedCardFooter">
+                            Number of people attending
+                            <!-- modal button trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch modal</button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-4 card text-center feedCard">
-                    <div class="card-body">
-                        <p class="card-title align-text-bottom">Clique Title</p>
-                        <a class="btn-floating waves-effect waves-light red" data-toggle="modal" data-href="cliqPop.html"><i class="material-icons">add</i></a>
-                        <p class="card-text align-text-bottom">number of people attending</p>
+                <div class="col-sm-3">
+                    <div class="card feedCard">
+                        <div class="card-block">
+                            <h3 class="card-title feedCardTitle">Event Title</h3>
+                        </div>
+                        <div class="card-footer feedCardFooter">
+                            Number of people attending
+                            <!-- modal button trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch modal</button>
+                        </div>
                     </div>
                 </div>
+                <div class="col-sm-3">
+                    <div class="card feedCard">
+                        <div class="card-block">
+                            <h3 class="card-title feedCardTitle">Event Title</h3>
+                        </div>
+                        <div class="card-footer feedCardFooter">
+                            Number of people attending
+                            <!-- modal button trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch modal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-<div class="card-deck">
-<div class="col-4 card text-center feedCard">
-    <div class="card-body">
-  <img class="card-img" src="assets/images/eventBox.jpg" alt="Card image">
-  <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
-  </div>
-</div>
-</div>
-</div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">
+                            <div class="chip">
+                                <img src="">
+                            </div>
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Date &amp; Time</p>
+                        <p>Location</p>
+                        <p>Description</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data="">3-way Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-
-
-
-
-
-
-        <div class="push"></div>
+    <div class="push"></div>
 
     </div>
 
@@ -178,9 +224,6 @@
     <script type="text/javascript" src="assets/javascript/dbutil.js"></script>
     <script type="text/javascript" src="assets/javascript/feed.js"></script>
     <!-- link for Ravish end -->
-<script>
-    $('#myModal').modal("show")
-</script>
 
 
 
