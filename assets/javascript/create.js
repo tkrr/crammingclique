@@ -15,21 +15,21 @@ $(function() {
         //validate the data
         //if error throw error back
         //update the database with details
-        var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
+        var userSessionEntity = {
+            "email": "someuser"
+        };
+        //var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
 
         console.log("on click event");
 
         var crammingClique = {
             "id": null,
-            "host": userSessionEntity.email,//"ravish.rao@gmail.com",//,
+            "host": userSessionEntity.email, //"ravish.rao@gmail.com",//,
             "title": $("#eventTitle").val(),
             "description": $("#eventDesc").val(),
             "where": $("#eventLoc").val(),
             "date": $("#eventDt").val(),
             "time": $("#eventTm").val(),
-            "attendees": [/*{
-                "attendee": userSessionEntity.email//"ravish.rao@gmail.com"//
-            }*/]
         };
 
         try {
@@ -42,5 +42,34 @@ $(function() {
         window.location.href = "feed.html";
     });
 
+
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: false // Close upon selecting a date,
+    });
+
+    $('.timepicker').pickatime({
+        default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+        fromnow: 0, // set default time to * milliseconds from now (using with default = 'now')
+        twelvehour: false, // Use AM/PM or 24-hour format
+        donetext: 'OK', // text for done-button
+        cleartext: 'Clear', // text for clear-button
+        canceltext: 'Cancel', // Text for cancel-button
+        autoclose: false, // automatic close timepicker
+        ampmclickable: true, // make AM PM clickable
+        aftershow: function() {} //Function for after opening timepicker
+    });
+
+    $('#newCrammingCluqueEvent').on('keyup keypress', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 13) {
+            e.preventDefault();
+            return false;
+        }
+    });
 
 });
