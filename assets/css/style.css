@@ -8,7 +8,7 @@ body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     max-width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 0px;
 
     /* sticky footer */
     display: flex;
@@ -23,6 +23,9 @@ body {
 .redText {
     color: #BB2B10;
 }
+.plus {
+    margin-left: 160px;
+}
 a:hover {
     color: green;
 }
@@ -31,16 +34,19 @@ a:hover {
     border-color: #ffffff;
 }
 
-/* topNav */
+/* ---------- topNav ---------- */
 .login {
     padding-right: 20px;
 }
 .nav-wrapper {
     background-color: #F4E8CE;
 }
-/* end topNav */
+.logo {
+    margin-bottom: 10px;
+}
+/* ---------- end topNav ---------- */
 
-/* main */
+/* ---------- main ---------- */
 .mainI {
     flex: 1 0 auto;
     background-image: url("../images/background.jpg");
@@ -73,7 +79,7 @@ a:hover {
   /* But also accounting for potential margin-bottom of last child */
   margin-bottom: -50px;
 }
-/* end main */
+/* ---------- end main ---------- */
 
 /* profile page */
 .emailinput {
@@ -81,7 +87,7 @@ a:hover {
 }
 /* end profile page */
 
-/* index page */
+/* ---------- index page ---------- */
 .landingContainer {
     height: 1064px;
 }
@@ -94,33 +100,49 @@ a:hover {
 .registerBtn {
     margin-top: 20px;
 }
-/* end index page */
+/* ---------- end index page ---------- */
 
-/* feed */
+/* ---------- feed ---------- */
 .cliqSearch {
 
 }
-.feedCard{
-    background-color: #4B576F;
+.feedCard {
+    background-image: url("../images/eventBox.jpg");
 }
-/* end feed */
+.feedCardFooter {
+    border: 0px;
+    background: none;
+    padding: 0px 0px 15px 0px;
+    margin-left: 20px;
+}
+.textOverImg {
+    padding: 0px;
+}
+.feedCardTitle {
+    margin-left: 20px;
+}
+/* ---------- end feed ---------- */
 
-/* bottomNav */
+/* ---------- bottomNav ---------- */
 .botmLinks {
     padding-right: 20px;
 }
 .page-footer {
-    background-color: #F4E8CE;
+    background: #F4E8CE!important;
+        padding: 0px;
 }
 .footer{
-    height: 50px;
+    height: 40px;
+}
+.footer-copyright {
+    background-color: #F4E8CE!important;
 }
 .push {
-  height: 50px;
+  height: 40px;
 }
-/* end bottomNav */
+/* ---------- end bottomNav ---------- */
 
-/* media queries */
+/* ---------- media queries ---------- */
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (min-width: 576px) {
 
@@ -140,3 +162,4 @@ a:hover {
 @media screen and (min-width: 1200px) {
 
 }
+/* ---------- end media queries ---------- */
