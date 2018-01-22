@@ -81,9 +81,11 @@ a:hover {
 }
 /* ---------- end main ---------- */
 
-/*  ---------- profile page ---------- */
-    /* rob */
-/*  ---------- end profile page ---------- */
+/* profile page */
+.emailinput {
+    color: #4B576F;
+}
+/* end profile page */
 
 /* ---------- index page ---------- */
 .landingContainer {
