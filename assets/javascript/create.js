@@ -1,4 +1,15 @@
 $(function() {
+    function initializeEventForm(){
+        var userSessionEntity = {
+            "email": "someuser",
+            "name": "Ravish Rao",
+            "imageUrl": "https://lh4.googleusercontent.com/-Iof98iTcQO8/AAAAAAAAAAI/AAAAAAAAIsk/7mP2ynQOq9U/s96-c/photo.jpg"
+        };
+        //var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
+        $("#h5EventHost").html("Hosted by <strong>" + userSessionEntity.name + "  </strong><img src='"+ userSessionEntity.imageUrl + "' class='rounded-circle' width='50' height='50'>");
+    };
+    initializeEventForm();
+
     function initAutocomplete() {
         // Create the autocomplete object, restricting the search to geographical
         // location types.
@@ -15,16 +26,12 @@ $(function() {
         //validate the data
         //if error throw error back
         //update the database with details
-        var userSessionEntity = {
-            "email": "someuser"
-        };
-        //var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
 
         console.log("on click event");
 
         var crammingClique = {
             "id": null,
-            "host": userSessionEntity.email, //"ravish.rao@gmail.com",//,
+            "host": userSessionEntity.email,
             "title": $("#eventTitle").val(),
             "description": $("#eventDesc").val(),
             "where": $("#eventLoc").val(),
