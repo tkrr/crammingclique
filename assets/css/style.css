@@ -48,11 +48,10 @@ a:hover {
 
 /* ---------- main ---------- */
 .mainI {
-    flex: 1 0 auto;
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+
 }
 .main {
     flex: 1 0 auto;
