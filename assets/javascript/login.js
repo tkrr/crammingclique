@@ -17,6 +17,17 @@ $(function() {
     // Google login initialization
     var googleAuth;
     var googleUser;
+    /**
+     * Listener method for sign-out live value.
+     *
+     * @param {boolean} val the updated signed out state.
+     */
+    var signinChanged = function(val) {
+        console.log('Signin state changed to ', val);
+        document.getElementById('signed-in-cell').innerText = val;
+    };
+
+
     gapi.load("auth2", function() {
         googleAuth = gapi.auth2.init({
             client_id: "245751156594-tp337vitvvl9ltm4jhpoirm249v20tsf.apps.googleusercontent.com",
@@ -70,22 +81,12 @@ $(function() {
             });
     }
 
-    /**
-     * Listener method for sign-out live value.
-     *
-     * @param {boolean} val the updated signed out state.
-     */
-    var signinChanged = function(val) {
-        console.log('Signin state changed to ', val);
-        document.getElementById('signed-in-cell').innerText = val;
-    };
 
 
     $(document).on("click", "#navSignout", async function(event) {
         console.log("In function Signout");
 
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function() {
+        googleAuth.signOut().then(function() {
             sessionStorage.removeItem("userSessionEntity");
             console.log('User signed out.');
             window.location.href = "index.html";
