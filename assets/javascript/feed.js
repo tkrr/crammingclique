@@ -1,7 +1,4 @@
 $(function() {
-    $(".dropdown-button").dropdown();
-    $(".button-collapse").sideNav();
-
     //get the current user from session
     //get the current user from session 
     var userSessionEntity = {
@@ -17,35 +14,7 @@ $(function() {
         var crammingCliques = await getAllCliques();
         //prepopulate all feed data pulled from the table
 
-        /*        
-
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">
-                            <div class="chip">
-                                <img src="">
-                            </div>
-                        </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Date &amp; Time</p>
-                        <p>Location</p>
-                        <p>Description</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data="">3-way Button</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-                */
-        crammingCliques.forEach(function(clique) {
+        crammingCliques.forEach(async function(clique) {
 
             var attending = false;
             var attendingCount = 1; //1 becuase the host will attend
@@ -84,17 +53,20 @@ $(function() {
 
             $("#divCliques").append(divClique)
 
+            var cliqueHost = await getUserDetailsByEmail(clique.host);
+            console.log(cliqueHost[0]);
 
             var divModalHeader = $("<div>").addClass("modal-header");
-            var h5ModalUser = $("<h5>").addClass("modal-title").attr("id", "exampleModalLongTitle");
-            var imgHost = $("<div>").addClass("chip").append($("<img>").attr("src", ""));
-            h5ModalUser.append(imgHost);
-            divModalHeader.append(h5ModalUser);
+            var pModalUser = $("<p>");
+            var imgHost = $("<img>").addClass("rounded-circle").attr("src", cliqueHost[0].imageUrl).attr("width","50").attr("height","50");
+            pModalUser.append(imgHost);
+            pModalUser.append($("<span>").html(" Organizer: "+ cliqueHost[0].name));
+            divModalHeader.append(pModalUser);
             var btnCliqueModalClose = $("<button>").addClass("close");
             btnCliqueModalClose.attr("type", "button");
             btnCliqueModalClose.attr("data-dismiss", "modal");
             btnCliqueModalClose.attr("aria-label", "Close");
-            btnCliqueModalClose.append($("<span>").attr("aria-hidden", "true").text("X"));
+            btnCliqueModalClose.append($("<span>").attr("aria-hidden", "true").text("x"));
             divModalHeader.append(btnCliqueModalClose);
 
 
@@ -159,6 +131,12 @@ $(function() {
 
         var cliqueId = $(this).attr("data-info");
         await registerCliques(cliqueId, userSessionEntity.email);
+        var cliqueDetails = await getCliqueDetails(cliqueId);
+        var cliqueHostDetails = await getUserDetailsByEmail(cliqueDetails[0].host);
+        if(cliqueHostDetails[0].receiveTextNotification && (cliqueHostDetails[0].phone !== null || cliqueHostDetails[0].phone !== undefined)){
+            mobileNotifyHost(cliqueHostDetails[0].phone,"Cramming user "+userSessionEntity.email+ " will be joining your clique titled "+cliqueDetails[0].title);    
+        }
+        
         $(this).text("De-Register");
         $(this).attr("id", "cliqueDeRegister");
     });

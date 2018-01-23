@@ -5,15 +5,10 @@
     <meta charset="utf-8">
     <!--  responsive behaviors -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- link for Ravish start -->
-    <!-- <script type="text/javascript" src="assets/javascript/util.js"></script> -->
+    <!--<script type="text/javascript" src="assets/javascript/util.js"></script>-->
     <!-- link for Ravish end -->
-
-
-
     <!-- link to start with fresh styling -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <!-- link to Bootstrap CSS -->
@@ -28,20 +23,22 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-
     <!-- link to jQuery JS -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-
-
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- link to jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- link to Materialize CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+    <!-- link to Bootstrap JS -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <!-- link for Ravish start -->
     <!-- link to load google API for signin -->
-    <!-- <script src="https://apis.google.com/js/api:client.js"></script> -->
+    <script src="https://apis.google.com/js/api:client.js"></script>
     <!-- link to load google firebase for data persistency -->
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <!-- link for Ravish end -->
-
-
-
     <title>Cramming Clique</title>
 </head>
 
@@ -51,84 +48,89 @@
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="profile.html">Profile</a></li>
             <li class="divider"></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="#" id="navSignout">Logout</a></li>
         </ul>
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Logo</a>
+                <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
                 <ul class="right hide-on-med-and-down">
-                <li><a href="feed.html">Explore</a></li>
-                <li><a href="create.html">Create</a></li>
-                <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">User<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="feed.html" class="redText">Explore</a></li>
+                    <li><a href="create.html" class="redText">Create</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
                 </ul>
             </div>
         </nav>
     </div>
-
     <!-- main container -->
-    <div id="profileContainer" class="main">
-        <form id="needs-validation" novalidate>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="validationName">Name</label>
-                    <input type="text" class="form-control" id="validationName" placeholder="Name" required>
-                </div>
-            <div class="col-md-4 mb-3">
-                <label for="userImg">Image</label>
-                <img id="userImg" src="#">
-            </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="validationName" >Email</label>
-                    <input type="text" readonly class="form-control-plaintext" id="emailinput" value="yourname@email.com">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-3 mb-3">
-                    <label for="phoneNum">Phone number</label>
-                    <input type="text" class="form-control" id="phoneNum" placeholder="Phone Number">
-                </div>
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Get Notifications</label>
-            </div>
-                <button id="saveProfileButton" class="btn btn-primary" type="submit">Submit form</button>
-            </div>
-        </form>
-    </div>
+    <div class="container main" id="createContainer">
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-title m-0 teal text-white">
+                        <div class="row m-0">
+                            <div class="m-auto">
+                                <h5 class=""><strong>My Profile</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content mt-2 pt-0">
+                        <form class="container" id="newCrammingCluqueEvent">
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s12 m-auto">
+                                    <div class="text-center">
+                                        <img id="userImg" src="" alt="Smiley face" width="100" height="100">
+                                        <br>
+                                        <a href="#">Change your photo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s12">
+                                    <input id="userName" type="text">
+                                    <label id="userNameLabel" for="userName" >Name</label>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s12">
+                                    <input type="text" disabled id="emailinput">
+                                    <label id="emailinputLabel"for="emailinput">Email</label>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s6">
+                                    <input id="phoneNum" type="text">
+                                    <label id="phoneNumLabel" for="phoneNum">Mobile Number</label>
+                                </div>
+                                <div class="col s6 pt-4">
+                                    <input type="checkbox" class="" id="mobileNotification">
+                                    <label class="" for="mobileNotification">Get Mobile Notifications</label>
+                                </div>
+                            </div>
 
+                            <div class="row mt-0 mb-0">
+                                <button class="btn waves-effect mdl-button--raised waves-light m-auto teal" type="submit" name="action" id="saveProfileButton">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- bottom navigation -->
-    <div id="bottomNav">
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container">
-                    <a class="grey-text text-lighten-4 left botmLinks" href="contact.html">Contact</a>
-                    <span class="right">Copyright &copy; 2018 TKRR</span>
-                </div>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                <a class="left botmLinks redText" href="contact.html">Contact</a>
+                <span class="right redText">Copyright &copy; 2018 TKRR</span>
             </div>
-        </footer>
-    </div>
-
-<!-- link to jQuery CDN -->
-<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-<!-- link to Materialize CDN -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
-<!-- link to Popper CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<!-- link to Bootstrap JS -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-
-
-<!-- link for Ravish start -->
-<script type="text/javascript" src="assets/javascript/dbutil.js"></script>
-<script type="text/javascript" src="assets/javascript/profile.js"></script>
-<!-- link for Ravish end -->
-
-
-
-
+        </div>
+    </footer>
+    <!-- link for Ravish start -->
+    <script type="text/javascript" src="assets/javascript/login.js"></script>
+    <script type="text/javascript" src="assets/javascript/dbutil.js"></script>
+    <script type="text/javascript" src="assets/javascript/profile.js"></script>
+    <!-- link for Ravish end -->
 </body>
 
 </html>

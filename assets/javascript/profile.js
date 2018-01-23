@@ -1,6 +1,13 @@
 $(function() {
-
+    Materialize.updateTextFields();
     //get the current user from session 
+    /*var userSessionEntity = {
+        "email": "ravish.rao@gmail.com",
+        "name": "Ravish Rao",
+        "imageUrl": "https://lh4.googleusercontent.com/-Iof98iTcQO8/AAAAAAAAAAI/AAAAAAAAIsk/7mP2ynQOq9U/s96-c/photo.jpg",
+        "phone": "034394922",
+        "receiveTextNotification": true
+    };*/
     var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
     console.log("email from session: ");
     //get connection to database
@@ -12,15 +19,19 @@ $(function() {
             console.log(users);
         } catch (e) {
             console.log(e);
-            console.log("I am at 6");
         }
         //prepopulate the profile fields from data pulled from the table                   
-        $("#validationName").val(users[0].name);
         $("#userImg").attr("src", users[0].imageUrl);
-        $("#phoneNum").val(users[0].phone);
-        $("#customCheck1").attr("checked", users[0].receiveTextNotification);
+        $("#userName").val(users[0].name);
+        $("#userNameLabel").addClass("active")
+        $("#emailinput").val(users[0].email);
+        $("#emailinputLabel").addClass("active")
+        if (users[0].phone !== null || users[0].phone !== undefined) {
+            $("#phoneNum").val(users[0].phone);
+            $("#phoneNumLabel").addClass("active")
 
-
+        }
+        $("#mobileNotification").attr("checked", users[0].receiveTextNotification);
     };
     loadProfileData();
 
@@ -41,11 +52,11 @@ $(function() {
             console.log("Error!! record not found.");
             var crammingUser = {
                 "id": userSessionEntity.id,
-                "name": $("#validationName").val(),
+                "name": $("#userName").val(),
                 "imageUrl": userSessionEntity.imageUrl,
                 "email": userSessionEntity.email,
                 "phone": $("#phoneNum").val(),
-                "receiveTextNotification": $("#customCheck1").is(":checked")
+                "receiveTextNotification": $("#mobileNotification").is(":checked")
             };
             try {
                 var insertStatus = await insertNewUserDetails(crammingUser);
@@ -58,9 +69,9 @@ $(function() {
             console.log("user found" + users[0].name);
             try {
                 var updateStatus = await updateUserDetailsByEmail(userSessionEntity.email, {
-                    "name": $("#validationName").val(),
+                    "name": $("#userName").val(),
                     "phone": $("#phoneNum").val(),
-                    "receiveTextNotification": $("#customCheck1").is(":checked")
+                    "receiveTextNotification": $("#mobileNotification").is(":checked")
                 });
             } catch (e) {
                 console.log(e);
