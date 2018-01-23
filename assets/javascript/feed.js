@@ -1,10 +1,10 @@
 $(function() {
     //get the current user from session
     //get the current user from session 
-    var userSessionEntity = {
+    /*var userSessionEntity = {
         "email": "someuser"
-    };
-    //var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
+    };*/
+    var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
     console.log("In onload on feed.js");
 
     //get all events from database

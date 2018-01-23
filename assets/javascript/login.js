@@ -16,11 +16,7 @@
     // Google login initialization
     var googleAuth;
     var googleUser;
-    /**
-     * Listener method for sign-out live value.
-     *
-     * @param {boolean} val the updated signed out state.
-     */
+
     var signinChanged = function(val) {
         console.log('Signin state changed to ', val);
         document.getElementById('signed-in-cell').innerText = val;
@@ -80,14 +76,14 @@
             });
     }
 
-$(function() {
-    $(document).on("click", "#navSignout", async function(event) {
-        console.log("In function Signout");
+    $(function() {
+        $(document).on("click", "#navSignout", async function(event) {
+            console.log("In function Signout");
 
-        googleAuth.signOut().then(function() {
-            sessionStorage.removeItem("userSessionEntity");
-            console.log('User signed out.');
-            window.location.href = "index.html";
+            googleAuth.signOut().then(function() {
+                sessionStorage.removeItem("userSessionEntity");
+                console.log('User signed out.');
+                window.location.href = "index.html";
+            });
         });
     });
-});
