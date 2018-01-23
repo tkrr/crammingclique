@@ -36,7 +36,7 @@ $(function() {
         googleLogin(document.getElementById("btnLogin"));
         googleLogin(document.getElementById("btnRegisterNewUser"));
         // Listen for sign-in state changes.
-        googleAuth.isSignedIn.listen(signinChanged);
+        //googleAuth.isSignedIn.listen(signinChanged);
 
     });
 
