@@ -1,11 +1,11 @@
 $(function() {
     function initializeEventForm(){
-        var userSessionEntity = {
+        /*var userSessionEntity = {
             "email": "someuser",
             "name": "Ravish Rao",
             "imageUrl": "https://lh4.googleusercontent.com/-Iof98iTcQO8/AAAAAAAAAAI/AAAAAAAAIsk/7mP2ynQOq9U/s96-c/photo.jpg"
-        };
-        //var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
+        };*/
+        var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
         $("#h5EventHost").html("Hosted by <strong>" + userSessionEntity.name + "  </strong><img src='"+ userSessionEntity.imageUrl + "' class='rounded-circle' width='50' height='50'>");
     };
     initializeEventForm();

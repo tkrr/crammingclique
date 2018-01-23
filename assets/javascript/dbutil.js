@@ -76,6 +76,23 @@ async function getAllCliques() {
     }
 };
 
+
+async function getCliqueDetails(cliqueId) {
+    console.log("In function getCliqueDetails");
+
+    var cliqueSnapshot = await database.ref("/crammingClique").orderByChild("id").equalTo(cliqueId).once("value");
+    var cliques = [];
+    if (cliqueSnapshot.val() === null) {
+        return cliques;
+    } else {
+        cliqueSnapshot.forEach(function(clique) {
+            cliques.push(clique.val());
+        });
+        return cliques;
+    }
+};
+
+
 async function registerCliques(cliqueId, user) {
     console.log("In function registerCliques");
 

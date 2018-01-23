@@ -131,6 +131,12 @@ $(function() {
 
         var cliqueId = $(this).attr("data-info");
         await registerCliques(cliqueId, userSessionEntity.email);
+        var cliqueDetails = await getCliqueDetails(cliqueId);
+        var cliqueHostDetails = await getUserDetailsByEmail(cliqueDetails[0].host);
+        if(cliqueHostDetails[0].receiveTextNotification && (cliqueHostDetails[0].phone !== null || cliqueHostDetails[0].phone !== undefined)){
+            mobileNotifyHost(cliqueHostDetails[0].phone,"Cramming user "+userSessionEntity.email+ " will be joining your clique titled "+cliqueDetails[0].title);    
+        }
+        
         $(this).text("De-Register");
         $(this).attr("id", "cliqueDeRegister");
     });

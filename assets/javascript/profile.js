@@ -1,14 +1,14 @@
 $(function() {
     Materialize.updateTextFields();
     //get the current user from session 
-    var userSessionEntity = {
+    /*var userSessionEntity = {
         "email": "ravish.rao@gmail.com",
         "name": "Ravish Rao",
         "imageUrl": "https://lh4.googleusercontent.com/-Iof98iTcQO8/AAAAAAAAAAI/AAAAAAAAIsk/7mP2ynQOq9U/s96-c/photo.jpg",
         "phone": "034394922",
         "receiveTextNotification": true
-    };
-    //var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
+    };*/
+    var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
     console.log("email from session: ");
     //get connection to database
 
