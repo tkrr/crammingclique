@@ -73,13 +73,14 @@ function signOut() {
     });
 }
 
-function checkIfLoggedIn() {
-    if (sessionStorage.getItem("userSessionEntity") == null) {
-        return false;
-    } else {
-        return true;
-    }
-}
+$(function() {
+    $(document).on("click", "#navSignout", async function(event) {
+        console.log("In function Signout");
 
-
-//testing git commit
+        googleAuth.signOut().then(function() {
+            sessionStorage.removeItem("userSessionEntity");
+            console.log('User signed out.');
+            window.location.href = "index.html";
+        });
+    });
+});
