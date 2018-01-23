@@ -26,12 +26,14 @@ body {
 
 a:hover {
     color: green;
+    text-decoration: none;
 }
 
 .btn-primary {
     border: 3px solid;
     border-color: #ffffff;
 }
+
 
 
 /* ---------- topNav ---------- */
@@ -49,15 +51,18 @@ a:hover {
 }
 
 
+
 /* ---------- end topNav ---------- */
 
 
 /* ---------- main ---------- */
-#landingContainer{
+
+#landingContainer {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
-    background-size: cover;    
+    background-size: cover;
 }
+
 .main {
     flex: 1 0 auto;
 }
@@ -83,6 +88,7 @@ a:hover {
 }
 
 
+
 /* ---------- end main ---------- */
 
 
@@ -91,6 +97,7 @@ a:hover {
 .emailinput {
     color: #4B576F;
 }
+
 
 
 /* end profile page */
@@ -113,6 +120,7 @@ a:hover {
 .registerBtn {
     margin-top: 20px;
 }
+
 
 
 /* ---------- end index page ---------- */
@@ -149,6 +157,7 @@ a:hover {
 }
 
 
+
 /* ---------- end feed ---------- */
 
 
@@ -176,6 +185,7 @@ a:hover {
 }
 
 
+
 /* ---------- end bottomNav ---------- */
 
 
@@ -187,9 +197,11 @@ a:hover {
 @media screen and (min-width: 576px) {}
 
 
+
 /* Medium devices (tablets, 768px and up) */
 
 @media screen and (min-width: 768px) {}
+
 
 
 /* Large devices (desktops, 992px and up) */
@@ -197,9 +209,11 @@ a:hover {
 @media screen and (min-width: 992px) {}
 
 
+
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media screen and (min-width: 1200px) {}
+
 
 
 /* ---------- end media queries ---------- */

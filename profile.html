@@ -70,36 +70,46 @@
                     <div class="card-title m-0 teal text-white">
                         <div class="row m-0">
                             <div class="m-auto">
-                                <h5 class=""><strong>Profile</strong></h5>
+                                <h5 class=""><strong>My Profile</strong></h5>
                             </div>
                         </div>
                     </div>
                     <div class="card-content mt-2 pt-0">
                         <form class="container" id="newCrammingCluqueEvent">
                             <div class="row m-0 p-0">
-                                <div class="input-field col s12">
-                                    <input id="eventTitle" type="text" placeholder="">
-                                    <label for="title">Name</label>
+                                <div class="input-field col s12 m-auto">
+                                    <div class="text-center">
+                                        <img id="userImg" src="" alt="Smiley face" width="100" height="100">
+                                        <br>
+                                        <a href="#">Change your photo</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row m-0 p-0">
                                 <div class="input-field col s12">
-                                    <label for="validationName">Email</label>
-                                    <input type="text" readonly class="form-control-plaintext" id="emailinput" value="yourname@email.com">
+                                    <input id="userName" type="text">
+                                    <label id="userNameLabel" for="userName" >Name</label>
                                 </div>
                             </div>
                             <div class="row m-0 p-0">
                                 <div class="input-field col s12">
-                                    <input id="eventTitle" type="text" placeholder="">
-                                    <label for="title">Phone Number</label>
+                                    <input type="text" disabled id="emailinput">
+                                    <label id="emailinputLabel"for="emailinput">Email</label>
                                 </div>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="form-check-input" id="customCheck1">
-                                <label class="form-check-label" for="customCheck1">Get Notifications</label>
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s6">
+                                    <input id="phoneNum" type="text">
+                                    <label id="phoneNumLabel" for="phoneNum">Mobile Number</label>
+                                </div>
+                                <div class="col s6 pt-4">
+                                    <input type="checkbox" class="" id="mobileNotification">
+                                    <label class="" for="mobileNotification">Get Mobile Notifications</label>
+                                </div>
                             </div>
+
                             <div class="row mt-0 mb-0">
-                                <button class="btn waves-effect mdl-button--raised waves-light m-auto teal" type="submit" name="action" id="btnCreateEvent">Save</button>
+                                <button class="btn waves-effect mdl-button--raised waves-light m-auto teal" type="submit" name="action" id="saveProfileButton">Save</button>
                             </div>
                         </form>
                     </div>
