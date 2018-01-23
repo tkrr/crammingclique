@@ -103,12 +103,17 @@ a:hover {
 /* ---------- end index page ---------- */
 
 /* ---------- feed ---------- */
-
+#divCliques {
+    margin: 0px 100px 0px 150px;
+}
 .cliqSearch {
 
 }
 .feedCard {
-    background-image: url("../images/eventBox.jpg");
+    background-image: url("../images/feedBorder.jpg");
+    background-size: cover;
+    height: 250px;
+    width: 300px;
 }
 .feedCardFooter {
     border: 0px;
