@@ -1,4 +1,3 @@
-$(function() {
     // Initialize Firebase
     var firebaseConfig = {
         apiKey: "AIzaSyCxL4l6YBouk-C92wcTeZ_sZbzQDcR00hE",
@@ -81,8 +80,7 @@ $(function() {
             });
     }
 
-
-
+$(function() {
     $(document).on("click", "#navSignout", async function(event) {
         console.log("In function Signout");
 
