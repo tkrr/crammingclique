@@ -28,7 +28,6 @@ gapi.load("auth2", function() {
 
 
 function googleLogin(element) {
-    console.log(element);
     googleAuth.attachClickHandler(element, {},
         function(googleUser) {
             console.log("google login successful");
