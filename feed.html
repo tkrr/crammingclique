@@ -17,14 +17,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- link to Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- link to Materialize icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- link to style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <!-- link to jQuery JS -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- link to Popper CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- link to jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- link to Materialize CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+    <!-- link to Bootstrap JS -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <!-- link for Ravish start -->
     <!-- link to load google API for signin -->
     <script src="https://apis.google.com/js/api:client.js"></script>
@@ -44,10 +52,10 @@
         </ul>
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img class="logo" src="assets/images/logoClear.png"></a>
+                <a href="feed.html" class="brand-logo"><img class="logo" src="assets/images/logoClear.png"></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="feed.html" class="redText vline">Explore</a></li>
-                    <li><a href="create.html" class="redText vline">Create</a></li>
+                    <li><a href="feed.html" class="redText">Explore</a></li>
+                    <li><a href="create.html" class="redText">Create</a></li>
                     <!-- Dropdown Trigger -->
                     <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
                 </ul>
@@ -64,32 +72,31 @@
             </div>
         </div>
         <!-- created events -->
-        <<div></div>>
-    <div class="row" id="divCliques">
-        <div class="col-sm-3">
-            <div class="card feedCard">
-                <div class="card-block">
-                    <h3 class="card-title feedCardTitle">Event Title</h3>
-                </div>
-                <div class="card-footer feedCardFooter">
-                    Number of people attending
-                    <!-- modal button trigger -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch modal</button>
+        <div class="row" id="divCliques">
+            <div class="col-sm-3">
+                <div class="card feedCard">
+                    <div class="card-block">
+                        <h3 class="card-title feedCardTitle">Event Title</h3>
+                    </div>
+                    <div class="card-footer feedCardFooter">
+                        Number of people attending
+                        <!-- modal button trigger -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch modal</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">
-                            <div class="chip">
-                                <img src="">
-                            </div>
-                        </h5>
+                    <p class="">
+                        <img class='rounded-circle' width='50' height='50' src="https://lh4.googleusercontent.com/-Iof98iTcQO8/AAAAAAAAAAI/AAAAAAAAIsk/7mP2ynQOq9U/s96-c/photo.jpg">
+                        <span>Organizer: </span>
+                        <span class="">Steph Thompson</span>
+                    </p>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -118,14 +125,6 @@
             </div>
         </footer>
     </div>
-    <!-- link to jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <!-- link to Materialize CDN -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
-    <!-- link to Popper CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <!-- link to Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <!-- link for Ravish start -->
     <script type="text/javascript" src="assets/javascript/dbutil.js"></script>
     <script type="text/javascript" src="assets/javascript/feed.js"></script>
