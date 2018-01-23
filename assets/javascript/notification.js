@@ -1,19 +1,23 @@
-// Initialize Firebase
-var firebaseConfig = {
-    apiKey: "AIzaSyCxL4l6YBouk-C92wcTeZ_sZbzQDcR00hE",
-    authDomain: "crammingclique.firebaseapp.com",
-    databaseURL: "https://crammingclique.firebaseio.com",
-    projectId: "crammingclique",
-    storageBucket: "crammingclique.appspot.com",
-    messagingSenderId: "321767599885"
-};
-firebase.initializeApp(firebaseConfig);
+function mobileNotifyHost(toMobileNumber, msg) {
 
-const messaging = firebase.messaging();
-messaging.requestPermission()
-.then(function() {
-  console.log('Have permission');
-})
-.catch(function(err) {
-    console.log('Error Occurred.');
-})
+    var fd = new FormData();
+    fd.append("Body", msg);
+    fd.append("To", "+1"+toMobileNumber);
+    fd.append("From", "+18179681159");
+    console.log(fd);
+
+    $.ajax({
+        url: 'https://api.twilio.com/2010-04-01/Accounts/ACf2a2d437f8d915118340617c6af60a97/Messages.json',
+        data: fd,
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader("Authorization", "Basic " + btoa("ACf2a2d437f8d915118340617c6af60a97" + ":" + "77a36fb272fb581051865330b4dd354d"));
+        },
+        success: function(data) {
+        	//Error handing in future
+            console.log("Successfully sent notification");
+        }
+    });
+};
