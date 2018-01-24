@@ -1,5 +1,7 @@
 $(function() {
-    Materialize.updateTextFields();
+    //For responsive navbar
+    $(".button-collapse").sideNav();
+
     //get the current user from session 
     /*var userSessionEntity = {
         "email": "ravish.rao@gmail.com",
@@ -9,14 +11,11 @@ $(function() {
         "receiveTextNotification": true
     };*/
     var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
-    console.log("email from session: ");
-    //get connection to database
 
     //get the user details stored in database
     async function loadProfileData() {
         try {
             var users = await getUserDetailsByEmail(userSessionEntity.email);
-            console.log(users);
         } catch (e) {
             console.log(e);
         }
