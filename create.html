@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- link for Ravish start -->
-    <script type="text/javascript" src="assets/javascript/util.js"></script>
+    <!-- <script type="text/javascript" src="assets/javascript/util.js"></script> -->
     <!-- link for Ravish end -->
     <!-- link to start with fresh styling -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
@@ -75,29 +75,29 @@
                         <form class="container" id="newCrammingCluqueEvent">
                             <div class="row m-0 p-0">
                                 <div class="input-field col s12">
-                                    <input id="eventTitle" type="text"  placeholder="">
+                                    <input id="eventTitle" type="text" class="validate" required>
                                     <label for="title">Title</label>
                                 </div>
                             </div>
                             <div class="row m-0 p-0">
                                 <div class="input-field col s12">
-                                    <textarea id="eventDesc" class="materialize-textarea"  placeholder=""></textarea>
+                                    <textarea id="eventDesc" class="materialize-textarea" class="validate" required></textarea>
                                     <label for="eventDesc">Description</label>
                                 </div>
                             </div>
                             <div class="row m-0 p-0">
                                 <div class="input-field col s12">
-                                    <input id="eventLoc" type="text" placeholder="" >
+                                    <input id="eventLoc" type="text" class="validate" required>
                                     <label for="eventLoc">Location</label>
                                 </div>
                             </div>
                             <div class="row m-0 p-0">
                                 <div class="input-field col s6">
-                                    <input id="eventDt" type="text" class="datepicker"  placeholder="">
+                                    <input id="eventDt" type="text" class="datepicker"  class="validate" required>
                                     <label for="dateTime">Date</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="eventTm" type="text" class="timepicker"  placeholder="">
+                                    <input id="eventTm" type="text" class="timepicker"  class="validate" required>
                                     <label for="eventTm">Time</label>
                                 </div>
                             </div>

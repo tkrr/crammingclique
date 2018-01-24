@@ -1,11 +1,13 @@
 $(function() {
+    var userSessionEntity = null;
+
     function initializeEventForm(){
         /*var userSessionEntity = {
             "email": "someuser",
             "name": "Ravish Rao",
             "imageUrl": "https://lh4.googleusercontent.com/-Iof98iTcQO8/AAAAAAAAAAI/AAAAAAAAIsk/7mP2ynQOq9U/s96-c/photo.jpg"
         };*/
-        var userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
+        userSessionEntity = JSON.parse(sessionStorage.getItem("userSessionEntity"));
         $("#h5EventHost").html("Hosted by <strong>" + userSessionEntity.name + "  </strong><img src='"+ userSessionEntity.imageUrl + "' class='rounded-circle' width='50' height='50'>");
     };
     initializeEventForm();
@@ -14,7 +16,6 @@ $(function() {
         // Create the autocomplete object, restricting the search to geographical
         // location types.
         var autocomplete = new google.maps.places.Autocomplete(
-            /** @type {!HTMLInputElement} */
             (document.getElementById("eventLoc")));
 
     };
