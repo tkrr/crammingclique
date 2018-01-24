@@ -1,4 +1,7 @@
 $(function() {
+    //For responsive navbar
+    $(".button-collapse").sideNav();
+
     var userSessionEntity = null;
 
     function initializeEventForm(){

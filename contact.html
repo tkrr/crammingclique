@@ -42,17 +42,22 @@
             <li class="divider"></li>
             <li><a href="#">Logout</a></li>
         </ul>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="feed.html" class="redText vline">Explore</a></li>
-                    <li><a href="create.html" class="redText vline">Create</a></li>
-                    <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="feed.html" class="redText">Explore</a></li>
+                <li><a href="create.html" class="redText">Create</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="feed.html" class="redText">Explore</a></li>
+                <li><a href="create.html" class="redText">Create</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
     </div>
     <!-- main container -->
     <div id="contactContainer" class="main container">
@@ -66,41 +71,35 @@
                             </div>
                         </div>
                     </div>
-
-<div class="card-content mt-2 pt-0">
-            <form id="contact-form" class="container" action="crammingclique612@gmail.com" method="post" enctype="text/plain">
-
+                    <div class="card-content mt-2 pt-0">
+                        <form id="contact-form" class="container" action="crammingclique612@gmail.com" method="post" enctype="text/plain">
                             <div class="row m-0 p-0">
                                 <div class="input-field col s12">
                                     <input id="name" type="text" required="required">
-                                    <label id="name" for="name" >Name</label>
+                                    <label id="name" for="name">Name</label>
                                 </div>
                             </div>
-
-                                    <div class="row m-0 p-0">
+                            <div class="row m-0 p-0">
                                 <div class="input-field col s12">
-                    <input type="email" id="email" name="email" required="required">
-                        <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required="required">
+                                    <label for="email">Email</label>
                                 </div>
                             </div>
-                                    <div class="row m-0 p-0">
+                            <div class="row m-0 p-0">
                                 <div class="input-field col s12">
-
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required="required"></textarea>
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" required="required"></textarea>
                                 </div>
                             </div>
- <div class="row mt-0 mb-0">
-                <input type="submit">
+                            <div class="row mt-0 mb-0">
+                                <input type="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            </form>
-</div>
-
-
         </div>
     </div>
-</div>
-</div>
     <!-- bottom navigation -->
     <footer class="page-footer">
         <div class="footer-copyright">
@@ -119,8 +118,8 @@
     <!-- link to Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <!-- link for Ravish start -->
-    <!-- <script type="text/javascript" src="assets/javascript/dbutil.js"></script> -->
-    <!-- <script type="text/javascript" src="assets/javascript/feed.js"></script> -->
+    <script type="text/javascript" src="assets/javascript/dbutil.js"></script> -->
+    <script type="text/javascript" src="assets/javascript/contact.js"></script>
     <!-- link for Ravish end -->
 </body>
 
