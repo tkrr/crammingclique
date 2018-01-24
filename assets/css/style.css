@@ -23,6 +23,7 @@ textarea {
 label {
     padding-left: 10px;
 }
+
 .transparent {
     background: transparent;
     border: 0px solid;
@@ -40,7 +41,6 @@ a:hover {
     color: #968d81;
     text-decoration: none;
     background-color: transparent;
-    box-shadow: 0 0 0;
 }
 
 .btn-primary {
