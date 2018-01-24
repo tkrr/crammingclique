@@ -25,6 +25,22 @@ label {
     padding-left: 10px;
 }
 
+/* label focus color */
+.input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+    color: #005eed !important;
+}
+
+.input-field input[type=email]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+    color: #005eed !important;
+    border-bottom: 1px solid #005eed !important;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #005eed !important;
+    box-shadow: 0 1px 0 0 #005eed !important;
+}
+
 .transparent {
     background: transparent;
     border: 0px solid;
@@ -162,7 +178,7 @@ a:hover {
 .emailinput {
     color: #4B576F;
 }
-/* ---------- End profile page ------------*/
+/* ---------- End Profile page ------------*/
 
 
 
@@ -182,7 +198,7 @@ a:hover {
 
 /* ---------- Contact Page---------- */
 .contactSubmit {
-    padding: 5px 0px 10px 0px;
+    padding: 10px 0px 5px 0px;
 }
 /* ---------- End Contact Page---------- */
 

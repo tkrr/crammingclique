@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- link for Ravish start -->
-    <!--<script type="text/javascript" src="assets/javascript/util.js"></script>-->
+    <!-- <script type="text/javascript" src="assets/javascript/util.js"></script> -->
     <!-- link for Ravish end -->
     <!-- link to start with fresh styling -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
@@ -17,8 +17,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- link to Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- link to Materialize icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- link to style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- favicon -->
@@ -27,6 +25,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- link to Popper CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <!-- link to jQuery CDN -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- link to Materialize CDN -->
@@ -50,27 +50,24 @@
             <li class="divider"></li>
             <li><a href="#" id="navSignout">Logout</a></li>
         </ul>
-        <ul id="dropdown2" class="dropdown-content">
-            <li><a href="profile.html">Profile</a></li>
-            <li class="divider"></li>
-            <li><a href="#" id="navSignout">Logout</a></li>
-        </ul>        
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="feed.html" class="redText">Explore</a></li>
-                <li><a href="create.html" class="redText">Create</a></li>
-                <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="feed.html" class="redText">Explore</a></li>
-                <li><a href="create.html" class="redText">Create</a></li>
-                <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown2">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
-            </ul>
-        </div>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="feed.html" class="brand-logo"><img class="logo" src="assets/images/logoClear.png"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="feed.html" class="redText">Explore</a></li>
+                    <li><a href="create.html" class="redText">Create</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="feed.html" class="redText">Explore</a></li>
+                    <li><a href="create.html" class="redText">Create</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-toggle redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
     <!-- main container -->
     <div id="contactContainer" class="main container-fluid col-6">
@@ -84,7 +81,7 @@
                             </div>
                         </div>
                     </div>
- 
+
                     <div class="card-content mt-2 pt-0">
                         <form id="contact-form" class="container-fluid" action="crammingclique612@gmail.com" method="post" enctype="text/plain">
                             <div class="row m-0 p-0">
@@ -95,7 +92,7 @@
                             </div>
                             <div class="row m-0 p-0">
                                 <div class="input-field col s12">
-                                    <input type="email" id="email" name="email" required="required">
+                                    <input type="text" id="email" name="email" required="required">
                                     <label for="email">Email</label>
                                 </div>
                             </div>
@@ -120,6 +117,7 @@
         <div class="footer-copyright">
             <div class="container">
                 <a class="left botmLinks redText" href="contact.html">Contact</a>
+                <!-- <a class="left botmLinks redText" href="mailto:crammingclique612@gmail.com?Subject=My Ponderings">Give us your feedback</a> -->
                 <span class="right redText">Copyright &copy; 2018 TKRR</span>
             </div>
         </div>
@@ -133,7 +131,7 @@
     <!-- link to Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <!-- link for Ravish start -->
-    <script type="text/javascript" src="assets/javascript/dbutil.js"></script> -->
+    <script type="text/javascript" src="assets/javascript/dbutil.js"></script>
     <script type="text/javascript" src="assets/javascript/contact.js"></script>
 
     <!-- link for Ravish end -->
