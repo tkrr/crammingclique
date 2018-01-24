@@ -18,7 +18,6 @@ $(function() {
 
             var attending = false;
             var attendingCount = 1; //1 becuase the host will attend
-            console.log(clique.attendees);
             if (clique.attendees !== null && clique.attendees !== undefined) {
                 var attendeesList = Object.keys(clique.attendees).map(function(key) {
                     return clique.attendees[key];
@@ -57,7 +56,6 @@ $(function() {
 
             //build clique modal
             var cliqueHost = await getUserDetailsByEmail(clique.host);
-            console.log(cliqueHost[0]);
 
             var divModalHeader = $("<div>").addClass("modal-header");
             var pModalUser = $("<p>");
