@@ -153,6 +153,14 @@ a:hover {
     margin: 0px 100px 0px 150px;
 }
 
+#cliqueCard {
+    margin: 5px;
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin-bottom: 30px;
+ }
+
 .cliqSearch {}
 
 .feedCard {
