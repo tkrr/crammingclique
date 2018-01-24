@@ -50,50 +50,68 @@
             <li class="divider"></li>
             <li><a href="#" id="navSignout">Logout</a></li>
         </ul>
-        <ul id="dropdown2" class="dropdown-content">
-            <li><a href="profile.html">Profile</a></li>
-            <li class="divider"></li>
-            <li><a href="#" id="navSignout">Logout</a></li>
-        </ul>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="feed.html" class="redText">Explore</a></li>
-                <li><a href="create.html" class="redText">Create</a></li>
-                <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="feed.html" class="redText">Explore</a></li>
-                <li><a href="create.html" class="redText">Create</a></li>
-                <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown2">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
-            </ul>
-        </div>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="feed.html" class="brand-logo"><img class="logo" src="assets/images/logoClear.png"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="feed.html" class="redText">Explore</a></li>
+                    <li><a href="create.html" class="redText">Create</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="feed.html" class="redText">Explore</a></li>
+                    <li><a href="create.html" class="redText">Create</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-toggle redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
     <!-- main container -->
-    <main class="container">
-    <section class="main-section">
-      <h1>Contact</h1>
+    <div id="contactContainer" class="main container-fluid col-6">
+        <div class="row topPad">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-title m-0 red darken-4 text-white">
+                        <div class="row m-0">
+                            <div class="m-auto">
+                                <h5 class=""><strong>Contact</strong></h5>
+                            </div>
+                        </div>
+                    </div>
 
-      <form id="contact-form">
-        <ul>
-          <li>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="John Smith" required="required">
-          </li>
-          <li>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
-          </li>
-          <li>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required="required"></textarea>
-          </li>
-        </ul>
-        <input type="submit">
-      </form>
+                    <div class="card-content mt-2 pt-0">
+                        <form id="contact-form" class="container-fluid" action="crammingclique612@gmail.com" method="post" enctype="text/plain">
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s12">
+                                    <input id="name" type="text" required="required">
+                                    <label id="name" for="name">Name</label>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s12">
+                                    <input type="text" id="email" name="email" required="required">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="input-field col s12">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" required="required"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mt-0 mb-0 contactSubmit">
+                                <button class="btn waves-effect mdl-button--raised waves-light m-auto red darken-4" type="submit" name="action" id="btnContact">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- bottom navigation -->
     <footer class="page-footer z-depth-3">
         <div class="footer-copyright">
