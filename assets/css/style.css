@@ -127,7 +127,15 @@ a:hover {
 
 
 /* ---------- feed ---------- */
+#cliqueCard {
+    margin: 5px;
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin-bottom: 30px;
+}
 
+/*
 #divCliques {
     margin: 0px 100px 0px 150px;
 }
@@ -155,7 +163,7 @@ a:hover {
 .feedCardTitle {
     margin-left: 20px;
 }
-
+*/
 
 
 /* ---------- end feed ---------- */

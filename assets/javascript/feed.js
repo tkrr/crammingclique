@@ -32,27 +32,30 @@ $(function() {
                     }
                 });
             }
-            //divClique.append($("<h6>").addClass("card-text").attr("id", "cliqueAttendees").text(attendingCount + " people attending"));
-            var divClique = $("<div>").addClass("col-sm-3").attr("id", clique.id);
+            //build clique card
+            var cardTitle = $("<span>").addClass("card-title").attr("id","cliqueCardTitle").text(clique.title);
+            var cardModalButton = $("<a>").addClass("btn-floating halfway-fab waves-effect waves-light red").attr("data-toggle","modal").attr("data-target","#modal" + clique.id);
+            cardModalButton.append("<i class='material-icons'>add</i>");
 
-            var divCliqueCard = $("<div>").addClass("card feedCard");
+            var cliqueDate = $("<p>").attr("id","cliqueCardDate").text(clique.date);
+            var cliqueAttendingCount = $("<p>").attr("id","cliqueCardAttending").text(attendingCount + " Crammers attending..");
 
-            var titleElement = $("<h3>").addClass("card-title feedCardTitle").text(clique.title);
-            var cardBlock = $("<div>").addClass("card-block");
-            cardBlock.append(titleElement);
-            divCliqueCard.append(cardBlock);
+            var cardHeader = $("<div>").addClass("card-header");
+            cardHeader.append(cliqueDate);
+            cardHeader.append(cardModalButton);
 
-            var btnModal = $("<button>").addClass("btn btn-primary").text("Details");
-            btnModal.attr("type", "button");
-            btnModal.attr("data-toggle", "modal");
-            btnModal.attr("data-target", "#modal" + clique.id);
-            var cardFooter = $("<div>").addClass("card-footer feedCardFooter").text(attendingCount + " attending this event");
-            cardFooter.append(btnModal);
-            divCliqueCard.append(cardFooter);
-            divClique.append(divCliqueCard);
 
-            $("#divCliques").append(divClique)
+            var cardContent = $("<div>").addClass("card-content");
+            cardContent.append(cardTitle);
+            cardContent.append(cliqueAttendingCount);
+           
+            var cardClique = $("<div>").addClass("card horizontal").attr("id","cliqueCard");
+            cardClique.append(cardHeader);
+            cardClique.append(cardContent);
+            $("#divCliques").append(cardClique);
 
+
+            //build clique modal
             var cliqueHost = await getUserDetailsByEmail(clique.host);
             console.log(cliqueHost[0]);
 
