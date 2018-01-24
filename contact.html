@@ -50,24 +50,27 @@
             <li class="divider"></li>
             <li><a href="#" id="navSignout">Logout</a></li>
         </ul>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="feed.html" class="brand-logo"><img class="logo" src="assets/images/logoClear.png"></a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="feed.html" class="redText">Explore</a></li>
-                    <li><a href="create.html" class="redText">Create</a></li>
-                    <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="feed.html" class="redText">Explore</a></li>
-                    <li><a href="create.html" class="redText">Create</a></li>
-                    <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-toggle redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
-                </ul>
-            </div>
-        </nav>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="profile.html">Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="#" id="navSignout">Logout</a></li>
+        </ul>        
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="feed.html" class="redText">Explore</a></li>
+                <li><a href="create.html" class="redText">Create</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="feed.html" class="redText">Explore</a></li>
+                <li><a href="create.html" class="redText">Create</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown2">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
     </div>
     <!-- main container -->
     <div id="contactContainer" class="main container-fluid col-6">
