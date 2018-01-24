@@ -3,6 +3,7 @@ body {
     max-width: 100%;
     height: 100%;
     margin: 0px;
+    background-color: #FEFBF7;
 
     /* sticky footer */
     display: flex;
@@ -11,6 +12,17 @@ body {
     /* end sticky footer */
 }
 
+input {
+    background-color: #fcf5eb!important;
+}
+
+textarea {
+    background-color: #fcf5eb!important;
+}
+
+label {
+    padding-left: 10px;
+}
 .transparent {
     background: transparent;
     border: 0px solid;
@@ -25,8 +37,10 @@ body {
 }
 
 a:hover {
-    color: green;
+    color: #968d81;
     text-decoration: none;
+    background-color: transparent;
+    box-shadow: 0 0 0;
 }
 
 .btn-primary {
@@ -34,8 +48,13 @@ a:hover {
     border-color: #ffffff;
 }
 
+.card {
+    background-color: #FEFBF7;
+}
 
-
+.topPad {
+    padding-top: 50px;
+}
 /* ---------- topNav ---------- */
 
 .login {
@@ -50,7 +69,9 @@ a:hover {
     margin-bottom: 10px;
 }
 
-
+.brand-logo {
+    margin-bottom: 10px;
+}
 
 /* ---------- end topNav ---------- */
 
@@ -127,15 +148,7 @@ a:hover {
 
 
 /* ---------- feed ---------- */
-#cliqueCard {
-    margin: 5px;
-    height: 200px;
-    width: 300px;
-    float: left;
-    margin-bottom: 30px;
-}
 
-/*
 #divCliques {
     margin: 0px 100px 0px 150px;
 }
@@ -163,10 +176,17 @@ a:hover {
 .feedCardTitle {
     margin-left: 20px;
 }
-*/
+
 
 
 /* ---------- end feed ---------- */
+
+
+/* ---------- contact ---------- */
+.contactSubmit {
+    padding: 5px 0px 10px 0px;
+}
+/* ---------- end contact ---------- */
 
 
 /* ---------- bottomNav ---------- */
@@ -178,6 +198,7 @@ a:hover {
 .page-footer {
     background: #F4E8CE!important;
     padding: 0px;
+    border-top: 1px solid #a6a6a6;
 }
 
 .footer {
