@@ -39,7 +39,7 @@
     function googleLogin(element) {
         googleAuth.attachClickHandler(element, {},
             function(googleUser) {
-                console.log("google login successful");
+                console.log("Google login successful");
 
                 //Store the entity object in sessionStorage where it will be accessible from all pages of the site.
                 var userSessionEntity = {};
@@ -52,7 +52,7 @@
 
                 database.ref("/crammingUsers").orderByChild("email").equalTo(googleUser.getBasicProfile().getEmail()).once("value", function(snapshot) {
                     if (snapshot.val() !== null) {
-                        console.log("record found: " + snapshot);
+                        console.log("Existing user");
                         window.location.href = "feed.html";
                         return;
                     } else {
