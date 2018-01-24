@@ -3,8 +3,16 @@ $(function() {
     $(".dropdown-button").dropdown({hover: false});
     $(".button-collapse").sideNav();
 
-    var userSessionEntity = null;
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        var autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById("eventLoc")));
 
+    };
+    initAutocomplete();
+
+    var userSessionEntity = null;
     function initializeEventForm(){
         /*var userSessionEntity = {
             "email": "someuser",
@@ -16,14 +24,6 @@ $(function() {
     };
     initializeEventForm();
 
-    function initAutocomplete() {
-        // Create the autocomplete object, restricting the search to geographical
-        // location types.
-        var autocomplete = new google.maps.places.Autocomplete(
-            (document.getElementById("eventLoc")));
-
-    };
-    initAutocomplete();
 
     //save button clink event
     $(document).on("click", "#btnCreateEvent", async function(event) {

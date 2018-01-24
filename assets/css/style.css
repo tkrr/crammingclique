@@ -1,4 +1,5 @@
 /* ---------- App level styles ---------- */
+
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     max-width: 100%;
@@ -25,18 +26,25 @@ label {
     padding-left: 10px;
 }
 
+
 /* label focus color */
-.input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+
+.input-field input[type=text]:focus+label,
+.materialize-textarea:focus:not([readonly])+label {
     color: #005eed !important;
 }
 
-.input-field input[type=email]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+.input-field input[type=email]:focus+label,
+.materialize-textarea:focus:not([readonly])+label {
     color: #005eed !important;
     border-bottom: 1px solid #005eed !important;
 }
 
+
 /* label underline focus color */
-.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+
+.input-field input[type=text]:focus,
+.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #005eed !important;
     box-shadow: 0 1px 0 0 #005eed !important;
 }
@@ -73,10 +81,13 @@ a:hover {
 .topPad {
     padding-top: 50px;
 }
+
+
 /* ---------- End App level styles ---------- */
 
 
 /* ---------- Top Nav ---------- */
+
 .login {
     padding-right: 20px;
 }
@@ -92,13 +103,13 @@ a:hover {
 .brand-logo {
     margin-bottom: 10px;
 }
+
+
 /* ---------- End Top Nav ---------- */
 
 
-
-
-
 /* ---------- Bottom Nav ---------- */
+
 .botmLinks {
     padding-right: 20px;
 }
@@ -120,13 +131,13 @@ a:hover {
 .push {
     height: 40px;
 }
+
+
 /* ---------- End Bottom Nav ---------- */
 
 
-
-
-
 /* ---------- Home page (index.html) ---------- */
+
 #landingContainer {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
@@ -169,21 +180,23 @@ a:hover {
 .registerBtn {
     margin-top: 20px;
 }
+
+
 /* ---------- End Home page (index.html) ---------- */
 
 
-
-
 /* ---------- Profile page ------------*/
+
 .emailinput {
     color: #4B576F;
 }
+
+
 /* ---------- End Profile page ------------*/
 
 
-
-
 /* ---------- Feed page ---------- */
+
 #cliqueCard {
     margin: 5px;
     height: 200px;
@@ -191,24 +204,28 @@ a:hover {
     float: left;
     margin-bottom: 30px;
 }
+
+
 /* ---------- End Feed page ---------- */
 
 
-
-
 /* ---------- Contact Page---------- */
+
 .contactSubmit {
     padding: 10px 0px 5px 0px;
 }
+
+
 /* ---------- End Contact Page---------- */
 
 
-
-
 /* ---------- media queries ---------- */
+
+
 /* Small devices (landscape phones, 576px and up) */
 
 @media screen and (min-width: 576px) {}
+
 
 
 
@@ -220,6 +237,7 @@ a:hover {
 
 
 
+
 /* Large devices (desktops, 992px and up) */
 
 @media screen and (min-width: 992px) {}
@@ -227,9 +245,11 @@ a:hover {
 
 
 
+
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media screen and (min-width: 1200px) {}
+
 
 
 

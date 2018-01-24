@@ -6,9 +6,8 @@
     <!--  responsive behaviors -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- link for Ravish start -->
-    <!-- <script type="text/javascript" src="assets/javascript/util.js"></script> -->
-    <!-- link for Ravish end -->
+    <!-- checks if the user is signed in -->
+    <script type="text/javascript" src="assets/javascript/util.js"></script>
     <!-- link to start with fresh styling -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <!-- link to Bootstrap CSS -->
@@ -25,14 +24,12 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <!-- link for Ravish start -->
     <!-- link to load google API for signin -->
     <script src="https://apis.google.com/js/api:client.js"></script>
     <!-- link to load google firebase for data persistency -->
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <!-- link to load google map API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnu3Zo-ouryCvnyyujvA8d3e4ANJ2d824&libraries=places" async defer></script>
-    <!-- link for Ravish end -->
     <title>Cramming Clique</title>
 </head>
 
@@ -57,7 +54,7 @@
                     <li><a href="feed.html" class="redText">Explore</a></li>
                     <li><a href="create.html" class="redText">Create</a></li>
                     <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown2">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="feed.html" class="redText">Explore</a></li>
@@ -75,12 +72,9 @@
                 <div class="card">
                     <div class="card-title m-0 teal text-white">
                         <div class="row m-0">
-                                <div class="m-auto">
-
-                                    <h5 class="" id="h5EventHost"></h5>
-
-
-                                </div>
+                            <div class="m-auto">
+                                <h5 class="" id="h5EventHost"></h5>
+                            </div>
                         </div>
                     </div>
                     <div class="card-content mt-2 pt-0">
@@ -105,11 +99,11 @@
                             </div>
                             <div class="row m-0 p-0">
                                 <div class="input-field col s6">
-                                    <input id="eventDt" type="text" class="datepicker"  class="validate" required>
+                                    <input id="eventDt" type="text" class="datepicker" class="validate" required>
                                     <label for="dateTime">Date</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="eventTm" type="text" class="timepicker"  class="validate" required>
+                                    <input id="eventTm" type="text" class="timepicker" class="validate" required>
                                     <label for="eventTm">Time</label>
                                 </div>
                             </div>
@@ -123,22 +117,18 @@
         </div>
     </div>
     <!-- bottom navigation -->
-
     <footer class="page-footer">
         <div class="footer-copyright">
             <div class="container">
                 <a class="left botmLinks redText" href="contact.html">Contact</a>
                 <!-- <a class="left botmLinks redText" href="mailto:crammingclique612@gmail.com?Subject=My Ponderings">Give us your feedback</a> -->
                 <span class="right redText">Copyright &copy; 2018 TKRR</span>
-
             </div>
         </div>
     </footer>
-    <!-- link for Ravish start -->
     <script type="text/javascript" src="assets/javascript/login.js"></script>
     <script type="text/javascript" src="assets/javascript/dbutil.js"></script>
     <script type="text/javascript" src="assets/javascript/create.js"></script>
-    <!-- link for Ravish end -->
 </body>
 
 </html>
