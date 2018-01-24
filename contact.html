@@ -73,53 +73,33 @@
         </div>
     </div>
     <!-- main container -->
-    <div id="contactContainer" class="main container-fluid col-6">
-        <div class="row topPad">
-            <div class="col s12 m12">
-                <div class="card">
-                    <div class="card-title m-0 red darken-4 text-white">
-                        <div class="row m-0">
-                            <div class="m-auto">
-                                <h5 class=""><strong>Contact</strong></h5>
-                            </div>
-                        </div>
-                    </div>
+    <main class="container">
+    <section class="main-section">
+      <h1>Contact</h1>
 
-                    <div class="card-content mt-2 pt-0">
-                        <form id="contact-form" class="container-fluid" action="crammingclique612@gmail.com" method="post" enctype="text/plain">
-                            <div class="row m-0 p-0">
-                                <div class="input-field col s12">
-                                    <input id="name" type="text" required="required">
-                                    <label id="name" for="name">Name</label>
-                                </div>
-                            </div>
-                            <div class="row m-0 p-0">
-                                <div class="input-field col s12">
-                                    <input type="text" id="email" name="email" required="required">
-                                    <label for="email">Email</label>
-                                </div>
-                            </div>
-                            <div class="row m-0 p-0">
-                                <div class="input-field col s12">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" name="message" required="required"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="row mt-0 mb-0 contactSubmit">
-                                <button class="btn waves-effect mdl-button--raised waves-light m-auto red darken-4" type="submit" name="action" id="btnContact">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <form id="contact-form">
+        <ul>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required="required">
+          </li>
+          <li>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+          </li>
+          <li>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required="required"></textarea>
+          </li>
+        </ul>
+        <input type="submit">
+      </form>
     <!-- bottom navigation -->
     <footer class="page-footer z-depth-3">
         <div class="footer-copyright">
             <div class="container">
-                <a class="left botmLinks redText" href="mailto:crammingclique612@gmail.com?Subject=My Ponderings">Give us your feedback</a>
+                <a class="left botmLinks redText" href="contact.html">Contact</a>
+                <!-- <a class="left botmLinks redText" href="mailto:crammingclique612@gmail.com?Subject=My Ponderings">Give us your feedback</a> -->
                 <span class="right redText">Copyright &copy; 2018 TKRR</span>
             </div>
         </div>
