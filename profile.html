@@ -6,8 +6,8 @@
     <!--  responsive behaviors -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- link for Ravish start -->
-    <!--<script type="text/javascript" src="assets/javascript/util.js"></script>-->
+    <!-- checks if the user is signed in -->
+    <script type="text/javascript" src="assets/javascript/util.js"></script>
     <!-- link for Ravish end -->
     <!-- link to start with fresh styling -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
@@ -33,12 +33,10 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
     <!-- link to Bootstrap JS -->
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-    <!-- link for Ravish start -->
     <!-- link to load google API for signin -->
     <script src="https://apis.google.com/js/api:client.js"></script>
     <!-- link to load google firebase for data persistency -->
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-    <!-- link for Ravish end -->
     <title>Cramming Clique</title>
 </head>
 
@@ -63,7 +61,7 @@
                     <li><a href="feed.html" class="redText">Explore</a></li>
                     <li><a href="create.html" class="redText">Create</a></li>
                     <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown2">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="feed.html" class="redText">Explore</a></li>
@@ -106,7 +104,7 @@
                             <div class="row m-0 p-0">
                                 <div class="input-field col s12">
                                     <input type="text" disabled id="emailinput">
-                                    <label id="emailinputLabel"for="emailinput">Email</label>
+                                    <label id="emailinputLabel" for="emailinput">Email</label>
                                 </div>
                             </div>
                             <div class="row m-0 p-0">
@@ -119,7 +117,6 @@
                                     <label class="" for="mobileNotification">Get Mobile Notifications</label>
                                 </div>
                             </div>
-
                             <div class="row mt-0 mb-0">
                                 <button class="btn waves-effect mdl-button--raised waves-light m-auto teal" type="submit" name="action" id="saveProfileButton">Save</button>
                             </div>
@@ -139,11 +136,9 @@
             </div>
         </div>
     </footer>
-    <!-- link for Ravish start -->
     <script type="text/javascript" src="assets/javascript/login.js"></script>
     <script type="text/javascript" src="assets/javascript/dbutil.js"></script>
     <script type="text/javascript" src="assets/javascript/profile.js"></script>
-    <!-- link for Ravish end -->
 </body>
 
 </html>
