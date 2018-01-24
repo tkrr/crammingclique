@@ -1,4 +1,7 @@
 $(function() {
+    //For responsive navbar
+    $(".button-collapse").sideNav();
+    
     //get the current user from session
     //get the current user from session 
     /*var userSessionEntity = {
@@ -80,7 +83,6 @@ $(function() {
             //for events for which user is the owner, have manage button
             var divModalFooter = $("<div>").addClass("modal-footer");
             if (userSessionEntity.email === clique.host) {
-                //divClique.append($("<btn>").addClass("btn btn-primary").attr("id", "cliqueManage").text("Manage"));
                 var btnCliqueManage = $("<button>").addClass("btn btn-secondary").attr("id", "cliqueManage").attr("data-info",clique.id).text("Manage");
                 divModalFooter.append(btnCliqueManage);
 
@@ -88,19 +90,15 @@ $(function() {
                 //for events for which user is not attending, have the register button
                 //for events for which user is already attending, have the derister button
                 if (attending === true) {
-                    //divClique.append($("<btn>").addClass("btn btn-primary").attr("id", "cliqueDeRegister").text("De-register"));
                     var btnCliqueManage = $("<button>").addClass("btn btn-secondary").attr("id", "cliqueDeRegister").attr("data-info",clique.id).text("De-register");
                     divModalFooter.append(btnCliqueManage);
 
                 } else {
-                    //divClique.append($("<btn>").addClass("btn btn-primary").attr("id", "cliqueRegister").text("Register"));
                     var btnCliqueManage = $("<button>").addClass("btn btn-secondary").attr("id", "cliqueRegister").attr("data-info",clique.id).text("Register");
                     divModalFooter.append(btnCliqueManage);
 
                 }
             }
-
-
 
             var divModalContent = $("<div>").addClass("modal-content");
             divModalContent.append(divModalHeader);
@@ -134,7 +132,7 @@ $(function() {
         await registerCliques(cliqueId, userSessionEntity.email);
         var cliqueDetails = await getCliqueDetails(cliqueId);
         var cliqueHostDetails = await getUserDetailsByEmail(cliqueDetails[0].host);
-        if(cliqueHostDetails[0].receiveTextNotification && (cliqueHostDetails[0].phone !== null || cliqueHostDetails[0].phone !== undefined)){
+        if(cliqueHostDetails[0].receiveTextNotification && cliqueHostDetails[0].phone !== null && cliqueHostDetails[0].phone !== undefined){
             mobileNotifyHost(cliqueHostDetails[0].phone,"Cramming user "+userSessionEntity.email+ " will be joining your clique titled "+cliqueDetails[0].title);    
         }
         

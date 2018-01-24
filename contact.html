@@ -50,17 +50,22 @@
             <li class="divider"></li>
             <li><a href="#" id="navSignout">Logout</a></li>
         </ul>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="feed.html" class="redText">Explore</a></li>
-                    <li><a href="create.html" class="redText">Create</a></li>
-                    <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"><img src="assets/images/logoClear.png"></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="feed.html" class="redText">Explore</a></li>
+                <li><a href="create.html" class="redText">Create</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="feed.html" class="redText">Explore</a></li>
+                <li><a href="create.html" class="redText">Create</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button redText" href="#!" data-activates="dropdown1">User<i class="material-icons right redText">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
     </div>
     <!-- main container -->
     <div id="contactContainer" class="main container-fluid col-6">
@@ -74,7 +79,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-contentmt-2 pt-0">
+ 
+                    <div class="card-content mt-2 pt-0">
                         <form id="contact-form" class="container-fluid" action="crammingclique612@gmail.com" method="post" enctype="text/plain">
                             <div class="row m-0 p-0">
                                 <div class="input-field col s12">
@@ -94,6 +100,7 @@
                                     <textarea id="message" name="message" required="required"></textarea>
                                 </div>
                             </div>
+
                             <div class="row mt-0 mb-0 contactSubmit">
                                 <button class="btn waves-effect mdl-button--raised waves-light m-auto red darken-4" type="submit" name="action" id="btnContact">Submit</button>
                             </div>
@@ -121,8 +128,9 @@
     <!-- link to Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <!-- link for Ravish start -->
-    <script type="text/javascript" src="assets/javascript/dbutil.js"></script>
-    <script type="text/javascript" src="assets/javascript/feed.js"></script>
+    <script type="text/javascript" src="assets/javascript/dbutil.js"></script> -->
+    <script type="text/javascript" src="assets/javascript/contact.js"></script>
+
     <!-- link for Ravish end -->
 </body>
 
